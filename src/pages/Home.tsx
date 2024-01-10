@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import { useRef, useState } from "react";
+import arrowRight from "src/assets/arrow-right.svg";
 import councilCornerArc from "src/assets/council-corner-arc.svg";
 import councilLogo from "src/assets/council-logo.svg";
 import elementBalls from "src/assets/element-balls.svg";
@@ -10,14 +11,9 @@ import elfiverseLogo from "src/assets/elfiverse-logo.svg";
 import hyperdriveCornerArc from "src/assets/hyperdrive-corner-arc.svg";
 import hyperdriveLogo from "src/assets/hyperdrive-logo.svg";
 import { CloseButton } from "src/components/CloseButton";
-import { ProjectCard } from "src/components/ProjectCard";
-import { VisitWebsiteButton } from "src/components/VisitWebsiteButton";
 import councilGraphic from "/council-graphic.png";
 import elfiverseGraphicBottomLeft from "/elfiverse-graphic-bottom-left.png";
 import elfiverseGraphicTopRight from "/elfiverse-graphic-top-right.png";
-
-const drawerNames = ["council", "hyperdrive", "element", "elfiverse"] as const;
-type DrawerName = (typeof drawerNames)[number];
 
 export function Home() {
   const [openedDrawer, setOpenedDrawer] = useState<DrawerName | null>(null);
@@ -271,5 +267,85 @@ export function Home() {
         </div>
       </div>
     </>
+  );
+}
+
+const drawerNames = ["council", "hyperdrive", "element", "elfiverse"] as const;
+type DrawerName = (typeof drawerNames)[number];
+
+function ProjectCard({
+  logoSrc,
+  logoAltText,
+  description,
+  onClick,
+  className,
+  arc,
+  arcClassName,
+}: {
+  logoSrc: string;
+  logoAltText?: string;
+  description: string;
+  onClick: () => void;
+  className?: string;
+  arc?: string;
+  arcClassName?: string;
+}) {
+  return (
+    <div
+      className={classNames(
+        "clip-corners bg-gradient-to-br from-white via-[#14D7D9] via-20% to-[#1A1F31] flex p-[1px] max-w-[415px] group hover:via-[#13F3F3] hover:via-40% hover:to-[#0D9999]",
+        className,
+      )}
+    >
+      <button
+        onClick={onClick}
+        className="clip-corners bg-[#053E3E] px-10 pt-10 pb-8 flex flex-col gap-2 bg-blend-soft-light bg-texture relative group-hover:bg-[#0A0B0B] transition-all duration-300"
+      >
+        <img
+          src={logoSrc}
+          alt={logoAltText}
+          className="group-hover:scale-75 origin-top-left transition-all duration-300"
+        />
+        <p className="m-0 text-left opacity-0 group-hover:opacity-100 transition-all duration-300">
+          {description}
+        </p>
+
+        {/* arrow */}
+        <svg
+          className="mt-auto ml-auto block mix-blend-soft-light opacity-60 group-hover:mix-blend-normal group-hover:opacity-100 transition-all duration-300 w-10 h-10 group-hover:scale-[200%] origin-bottom-right stroke-white group-hover:stroke-[.5px]"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 12H20M20 12L13.5 5.5M20 12L13.5 18.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+
+        {/* bottom-right arc graphic */}
+        {arc && (
+          <img
+            src={arc}
+            className={classNames(
+              "absolute bottom-0 right-0 mix-blend-soft-light opacity-60",
+              arcClassName,
+            )}
+          />
+        )}
+      </button>
+    </div>
+  );
+}
+
+export function VisitWebsiteButton({ href }: { href: string }) {
+  return (
+    <a
+      className="backdrop-blur-lg bg-gradient-to-b from-white/30 to-white/15 hover:from-white/20 hover:to-white/10 rounded-full h-12 pl-6 pr-4 gap-2 inline-flex items-center transition-all"
+      href={href}
+    >
+      Visit Website
+      <img src={arrowRight} />
+    </a>
   );
 }
