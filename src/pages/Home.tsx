@@ -11,6 +11,8 @@ import elfiverseLogo from "src/assets/elfiverse-logo.svg";
 import hyperdriveCornerArc from "src/assets/hyperdrive-corner-arc.svg";
 import hyperdriveLogo from "src/assets/hyperdrive-logo.svg";
 import { CloseButton } from "src/components/CloseButton";
+import { FlairDown } from "src/components/FlairDown";
+import { FlairUp } from "src/components/FlairUp";
 import councilGraphic from "/council-graphic.png";
 import elfiverseGraphicBottomLeft from "/elfiverse-graphic-bottom-left.png";
 import elfiverseGraphicTopRight from "/elfiverse-graphic-top-right.png";
@@ -37,6 +39,10 @@ export function Home() {
   return (
     <>
       <div className="max-w-[1440px] mx-auto px-20 mt-32 flex gap-5">
+        {/* flair glows */}
+        <FlairUp className="fixed top-0 left-1/2 -translate-x-1/2 z-[-1]" />
+        <FlairDown className="fixed bottom-0 left-1/2 -translate-x-1/2 z-[-1]" />
+
         {/* Left (title + first 2 titles) */}
         <div className="flex flex-col justify-between">
           <h1 className="font-incise text-[82px] w-[600px] tracking-tight leading-none -mt-2">
@@ -306,7 +312,7 @@ function ProjectCard({
           alt={logoAltText}
           className="group-hover:scale-75 origin-top-left transition-all duration-300"
         />
-        <p className="m-0 text-left opacity-0 group-hover:opacity-100 transition-all duration-300">
+        <p className="mt-2 mb-0 text-left opacity-0 group-hover:opacity-100 transition-all duration-300">
           {description}
         </p>
 
@@ -323,12 +329,16 @@ function ProjectCard({
           />
         </svg>
 
+        {/* flare glows */}
+        <FlairDown className="absolute top-0 left-[40%] -translate-x-1/2 z-[-1] opacity-0 group-hover:opacity-50 transition-all duration-300" />
+        <FlairUp className="absolute bottom-0 left-[40%] -translate-x-1/2 z-[-1] opacity-0 group-hover:opacity-50 transition-all duration-300" />
+
         {/* bottom-right arc graphic */}
         {arc && (
           <img
             src={arc}
             className={classNames(
-              "absolute bottom-0 right-0 mix-blend-soft-light opacity-60",
+              "absolute bottom-0 right-0 mix-blend-soft-light opacity-60 group-hover:!opacity-0 transition-all duration-300",
               arcClassName,
             )}
           />

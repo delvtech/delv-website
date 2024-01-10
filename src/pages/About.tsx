@@ -4,9 +4,9 @@ export function About() {
       {/* hero */}
       <div className="flex justify-center mx-auto flex gap-5 px-20 pb-16 overflow-y-hidden relative w-full">
         {/* glows */}
-        <div className="absolute w-[1002px] h-[1240px] rounded-full bg-[#9F79FF] blur-[80px] left-1/2 -translate-x-1/2 top-[-40px]"></div>
-        <div className="absolute w-[1002px] h-[1100px] rounded-full bg-[#10F9B1] blur-[80px] left-1/2 -translate-x-1/2 top-2"></div>
-        <div className="absolute w-[1190px] h-[1010px] rounded-full bg-white/60 blur-xl left-1/2 -translate-x-1/2 top-[90px]"></div>
+        <div className="absolute w-[1002px] h-[1240px] rounded-[100%] bg-[#9F79FF] blur-[80px] left-1/2 -translate-x-1/2 top-[-40px]"></div>
+        <div className="absolute w-[1002px] h-[1100px] rounded-[100%] bg-[#10F9B1] blur-[80px] left-1/2 -translate-x-1/2 top-2"></div>
+        <div className="absolute w-[1190px] h-[1010px] rounded-[100%] bg-white/60 blur-xl left-1/2 -translate-x-1/2 top-[90px]"></div>
 
         {/* black circle */}
         <div className="absolute w-[1104px] h-[1104px] rounded-full bg-black left-1/2 -translate-x-1/2 top-10"></div>
@@ -29,9 +29,9 @@ export function About() {
       {/* mission */}
       <div className="py-56 overflow-y-hidden relative">
         {/* glows */}
-        <div className="absolute w-[1240px] h-[414px] rounded-full bg-[#9F79FF] blur-[100px] left-1/2 -translate-x-1/2 top-full -translate-y-6 opacity-55"></div>
-        <div className="absolute w-[1240px] h-[482px] rounded-full bg-[#10F9B1] blur-[100px] left-1/2 -translate-x-1/2 top-full translate-y-.5 opacity-55"></div>
-        <div className="absolute w-[1240px] h-[524px] rounded-full bg-white/60 blur-xl left-1/2 -translate-x-1/2 top-full translate-y-6 opacity-55"></div>
+        <div className="absolute w-[1240px] h-[414px] rounded-[100%] bg-[#9F79FF] blur-[100px] left-1/2 -translate-x-1/2 top-full -translate-y-6 opacity-55"></div>
+        <div className="absolute w-[1240px] h-[482px] rounded-[100%] bg-[#10F9B1] blur-[100px] left-1/2 -translate-x-1/2 top-full translate-y-.5 opacity-55"></div>
+        <div className="absolute w-[1240px] h-[524px] rounded-[100%] bg-white/60 blur-xl left-1/2 -translate-x-1/2 top-full translate-y-6 opacity-55"></div>
 
         <div className="max-w-5xl flex items-end justify-between mx-auto">
           <div className="flex flex-col gap-4 justify-between max-w-72">
@@ -49,7 +49,7 @@ export function About() {
       </div>
 
       {/* values */}
-      <div className="py-36 overflow-y-hidden relative">
+      <div className="pt-36 overflow-y-hidden relative">
         <div className="max-w-5xl flex items-start justify-between mx-auto">
           <div className="flex flex-col gap-4 justify-between max-w-72">
             <p className="text-3xl leading-none">02</p>
@@ -107,8 +107,16 @@ export function About() {
         </div>
       </div>
 
+      {/* glow */}
+      <div className="relative h-96 overflow-y-hidden mb-14">
+        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-[#10F9B1] w-[1700px] h-[933px] top-[224px] blur-[100px]"></div>
+        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-[#9F79FF] w-[1310px] h-[879px] top-[255px] blur-[100px]"></div>
+        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-white w-[1440px] h-[980px] top-[222px] blur-xl"></div>
+        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-black w-[2022px] h-[980px] top-[237px]"></div>
+      </div>
+
       {/* guiding principles */}
-      <div className="pt-80 pb-32 overflow-y-hidden relative">
+      <div className="pb-32 overflow-y-hidden relative">
         <div className="max-w-5xl flex items-start justify-between mx-auto">
           <div className="flex flex-wrap items justify-between gap-16 font-blanka">
             <div className="flex flex-col gap-4 justify-between max-w-72">

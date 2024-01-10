@@ -133,7 +133,10 @@ function App() {
           <MenuLink to="#" onClick={closeMenu}>
             Build
           </MenuLink>
-          <MenuLink to="#" onClick={closeMenu}>
+          <MenuLink
+            href="https://wellfound.com/company/delv-tech/jobs"
+            onClick={closeMenu}
+          >
             Careers
           </MenuLink>
           <MenuLink href="https://blog.delv.tech" onClick={closeMenu}>
