@@ -9,7 +9,6 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, process.cwd(), "");
     basePath = env.BASE_PATH;
   }
-  console.log("basePath", basePath);
   return {
     plugins: [react(), tsconfigPaths()],
     envDir: ".",
