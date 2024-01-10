@@ -37,12 +37,12 @@ export function Home() {
   }
 
   return (
-    <>
-      <div className="max-w-[1440px] mx-auto px-20 mt-32 flex gap-5">
-        {/* flair glows */}
-        <FlairUp className="fixed top-0 left-1/2 -translate-x-1/2 z-[-1]" />
-        <FlairDown className="fixed bottom-0 left-1/2 -translate-x-1/2 z-[-1]" />
+    <div className="overflow-hidden relative">
+      {/* flair glows */}
+      <FlairUp className="fixed top-0 left-1/2 -translate-x-1/2 z-[-1]" />
+      <FlairDown className="fixed bottom-0 left-1/2 -translate-x-1/2 z-[-1]" />
 
+      <div className="max-w-[1440px] mx-auto px-20 mt-32 flex gap-5">
         {/* Left (title + first 2 titles) */}
         <div className="flex flex-col justify-between">
           <h1 className="font-incise text-[82px] w-[600px] tracking-tight leading-none -mt-2">
@@ -272,7 +272,7 @@ export function Home() {
           <VisitWebsiteButton href="https://elfiverse.delv.tech" />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
