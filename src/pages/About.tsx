@@ -107,23 +107,23 @@ export function About() {
         </div>
       </div>
 
-      {/* values */}
+      {/* guiding principles */}
       <div className="pt-80 pb-32 overflow-y-hidden relative">
         <div className="max-w-5xl flex items-start justify-between mx-auto">
-          <div className="flex flex-col gap-4 justify-between max-w-72">
-            <p className="text-3xl leading-none">03</p>
-            <h2 className="text-[82px] font-incise tracking-tight leading-none">
-              Guiding Principles
-            </h2>
-          </div>
-          <div className="max-w-[440px] flex flex-col gap-8 mt-14 font-blanka">
-            <p>
+          <div className="flex flex-wrap items justify-between gap-16 font-blanka">
+            <div className="flex flex-col gap-4 justify-between max-w-72">
+              <p className="text-3xl leading-none">03</p>
+              <h2 className="text-[82px] font-incise tracking-tight leading-none">
+                Guiding Principles
+              </h2>
+            </div>
+            <p className="basis-[440px] mt-24">
               Guiding Principles are mission focused and help to steer our
               priorities. They are the guideposts that ensure we stay true to
               the ideals we have set out for ourselves. They underpin every
               action, decision, or move the team makes.
             </p>
-            <div>
+            <div className="basis-[440px]">
               <h3 className="font-bold mb-2 font-incise text-2xl">
                 Results Over Everything
               </h3>
@@ -136,7 +136,7 @@ export function About() {
                 producing these results.
               </p>
             </div>
-            <div>
+            <div className="basis-[440px]">
               <h3 className="font-bold mb-2 font-incise text-2xl">
                 Make It safe and approachable
               </h3>
@@ -148,7 +148,7 @@ export function About() {
                 as safe and easy as possible for everyone.
               </p>
             </div>
-            <div>
+            <div className="basis-[440px]">
               <h3 className="font-bold mb-2 font-incise text-2xl">
                 Lead by Example
               </h3>
@@ -161,7 +161,7 @@ export function About() {
                 long-term, and uplifting our teammates.
               </p>
             </div>
-            <div>
+            <div className="basis-[440px]">
               <h3 className="font-bold mb-2 font-incise text-2xl">
                 Cultivate Curiosity and Continuous Learning
               </h3>
@@ -174,7 +174,7 @@ export function About() {
                 1-on-1 and in groups, for our ongoing professional development.
               </p>
             </div>
-            <div>
+            <div className="basis-[440px]">
               <h3 className="font-bold mb-2 font-incise text-2xl">
                 Foster Clear Communication and active Collaboration
               </h3>
