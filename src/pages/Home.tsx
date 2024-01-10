@@ -12,6 +12,7 @@ import hyperdriveLogo from "src/assets/hyperdrive-logo.svg";
 import { CloseButton } from "src/components/CloseButton";
 import { ProjectCard } from "src/components/ProjectCard";
 import { VisitWebsiteButton } from "src/components/VisitWebsiteButton";
+import { formatPath } from "src/utils/formatPath";
 
 const drawerNames = ["council", "hyperdrive", "element", "elfiverse"] as const;
 type DrawerName = (typeof drawerNames)[number];
@@ -109,7 +110,7 @@ export function Home() {
         {/* glow */}
         <div className="absolute w-[757.166px] h-[758.23px] left-[-251.67px] bottom-[-313.08px] bg-[#46516F] opacity-80 blur-[70px] rounded-full"></div>
         <img
-          src="/public/council-graphic.png"
+          src={formatPath("/public/council-graphic.png")}
           className="absolute block left-[-192px] bottom-[-240px]"
         />
 
@@ -235,11 +236,11 @@ export function Home() {
         )}
       >
         <img
-          src="/public/elfiverse-graphic-top-right.png"
+          src={formatPath("/public/elfiverse-graphic-top-right.png")}
           className="absolute block top-[-115px] right-[-12px]"
         />
         <img
-          src="/public/elfiverse-graphic-bottom-left.png"
+          src={formatPath("/public/elfiverse-graphic-bottom-left.png")}
           className="absolute block left-[-15px] bottom-[-44px]"
         />
 
