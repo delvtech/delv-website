@@ -38,6 +38,8 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: build
+        env:
+          BASE_PATH: ${{ secrets.BASE_PATH }}
         run: yarn build
 
       - name: setup pages
