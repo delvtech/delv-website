@@ -9,6 +9,7 @@ export default {
       },
       backgroundImage: {
         texture: "url('/public/texture.png')",
+        grid: "url('/public/grid.svg')",
       },
     },
   },
