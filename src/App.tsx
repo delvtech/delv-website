@@ -127,10 +127,7 @@ function App() {
           <MenuLink to="/about" onClick={closeMenu}>
             About
           </MenuLink>
-          {/* <MenuLink to="#" onClick={closeMenu}>
-            Community
-          </MenuLink> */}
-          <MenuLink to="#" onClick={closeMenu}>
+          <MenuLink href="https://www.github.com/delvtech" onClick={closeMenu}>
             Build
           </MenuLink>
           <MenuLink
