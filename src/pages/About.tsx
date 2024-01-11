@@ -9,7 +9,8 @@ export function About() {
         <div className="absolute w-[1190px] h-[1010px] rounded-[100%] bg-white/60 blur-xl left-1/2 -translate-x-1/2 top-[90px]"></div>
 
         {/* black circle */}
-        <div className="absolute w-[1104px] h-[1104px] rounded-full bg-black left-1/2 -translate-x-1/2 top-10 bg-grid bg-[-87px_-40px]"></div>
+        <div className="absolute w-[1104px] h-[1104px] rounded-full bg-black left-1/2 -translate-x-1/2 top-10"></div>
+        <div className="absolute bg-grid w-full h-full [clip-path:circle(552px_at_50%_592px)]"></div>
 
         {/* bottom shadow */}
         <div className="absolute w-full h-[440px] bg-gradient-to-b from-transparent to-black bottom-0"></div>
@@ -123,7 +124,8 @@ export function About() {
         <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-[#10F9B1] w-[1700px] h-[933px] top-[224px] blur-[100px]"></div>
         <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-[#9F79FF] w-[1310px] h-[879px] top-[255px] blur-[100px]"></div>
         <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-white w-[1440px] h-[980px] top-[222px] blur-xl"></div>
-        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-black w-[2022px] h-[980px] top-[237px] bg-grid bg-[-144px_-151px]"></div>
+        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-black w-[2022px] h-[980px] top-[237px]"></div>
+        <div className="absolute bg-grid w-full h-full [clip-path:ellipse(1011px_490px_at_50%_727px)] bg-[0_86px]"></div>
       </div>
 
       {/* guiding principles */}
