@@ -54,7 +54,7 @@ export function Home() {
               className="h-[336px]"
               logoSrc={councilLogo}
               logoAltText="Council"
-              description="Council represents the next evolution of on-chain governance, allowing anyone to build adaptable governance systems that meet both the practical needs of day-to-day activities and the required flexibility of long-term governance."
+              description="An adaptable governance framework to create and manage DAOs."
               arc={councilCornerArc}
               onClick={() => openDrawer("council")}
             />
@@ -62,7 +62,7 @@ export function Home() {
               className="h-[432px]"
               logoSrc={hyperdriveLogo}
               logoAltText="Hyperdrive"
-              description="Hyperdrive is the next research leap from DELV on variable and fixed rate primitives. It is an advanced AMM featuring no preset expiration dates, no fragmented liquidity, and no LP rollovers — aka everlasting liquidity."
+              description="Hyperdrive is a new AMM for fixed and variable yield positions underpinned by a novel pricing mechanism. It enables terms on-demand and removes the need for liquidity providers to roll over their capital allocations. Additionally, its mechanism design enables a more efficient, symmetrical yield market and is open source for others to build upon."
               arc={hyperdriveCornerArc}
               arcClassName="opacity-100"
               onClick={() => openDrawer("hyperdrive")}
@@ -84,7 +84,7 @@ export function Home() {
             className="h-[348px]"
             logoSrc={elfiverseLogo}
             logoAltText="Elfiverse"
-            description="The lore of the Element DAO was born with Elfiverse – an endeavor to intersect the DeFi and NFT worlds while catalyzing network effects and community building. Elfiverse pushes the boundaries of on-chain governance allowing communities to look beyond the 1-token-1-vote system, driving inclusive governance participation for all."
+            description="An endeavor to intersect the DeFi and NFT worlds for community building, introducing new possibilities for governance."
             arc={elfiverseCornerArc}
             onClick={() => openDrawer("elfiverse")}
           />
@@ -179,8 +179,6 @@ export function Home() {
             exposure to the variable rate, or market-make to profit from
             directional market shifts. Yield exposure at your control.
           </p>
-
-          <VisitWebsiteButton href="#" />
         </div>
       </div>
 
