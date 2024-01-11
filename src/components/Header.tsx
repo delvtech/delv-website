@@ -1,12 +1,30 @@
 import classNames from "classnames";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import delvLogo from "src/assets/delv-logo.svg";
+import discordLogo from "src/assets/discord-logo.svg";
+import githubLogo from "src/assets/github-logo.svg";
 import menuIcon from "src/assets/menu-icon.svg";
+import xLogo from "src/assets/x-logo.svg";
 import { CloseButton } from "src/components/CloseButton";
 
 export function Header() {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  function onScroll() {
+    console.log(window.scrollY);
+    if (window.scrollY > 0 && !isScrolled) {
+      setIsScrolled(true);
+    } else if (window.scrollY === 0 && isScrolled) {
+      setIsScrolled(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  });
 
   const onKeyDown = useRef((e: KeyboardEvent) => {
     if (e.key === "Escape") {
@@ -26,7 +44,14 @@ export function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 flex justify-between w-full pt-7 pb-4 px-16 mx-auto z-10">
+      <header
+        className={classNames(
+          "fixed top-0 left-0 right-0 flex justify-between w-full pt-7 pb-4 px-16 mx-auto z-10 transition-all duration-300",
+          {
+            "!py-2": isScrolled,
+          },
+        )}
+      >
         <Link
           to="/"
           className="h-[60px] px-6 -ml-3 bg-black/40 backdrop-blur flex items-center rounded-full overflow-hidden"
@@ -49,7 +74,7 @@ export function Header() {
       {/* drawer overlay */}
       <div
         className={classNames(
-          "fixed inset-0 bg-transparent pointer-events-none transition-all duration-300",
+          "fixed inset-0 bg-transparent pointer-events-none transition-all duration-300 z-10",
           {
             "pointer-events-auto": menuOpen,
           },
@@ -68,7 +93,7 @@ export function Header() {
       >
         <CloseButton onClick={closeMenu} />
 
-        <div className="flex flex-col">
+        <div className="flex flex-col h-full">
           <div>
             <MenuLink to="/about" onClick={closeMenu}>
               About
@@ -89,10 +114,38 @@ export function Header() {
               Blog
             </MenuLink>
           </div>
-          
+
           {/* menu footer */}
-
-
+          <div className="flex gap-2 mt-auto px-8 py-2 items-center">
+            <div className="flex gap-2">
+              <SocialLink
+                href="https://discord.gg/EEfKmfQdtx"
+                name="Discord"
+                imgSrc={discordLogo}
+                imgClassName="w-7 h-7"
+              />
+              <SocialLink
+                href="https://twitter.com/delv_tech"
+                name="X"
+                imgSrc={xLogo}
+                imgClassName="w-5 h-5"
+              />
+              <SocialLink
+                href="https://github.com/delvtech"
+                name="GitHub"
+                imgSrc={githubLogo}
+                imgClassName="w-7 h-7"
+              />
+            </div>
+            <a
+              href="https://elementfi.s3.us-east-2.amazonaws.com/element-finance-terms-of-service.pdf"
+              className="opacity-75 hover:opacity-100 ml-auto"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Terms
+            </a>
+          </div>
         </div>
       </div>
     </>
@@ -140,4 +193,32 @@ function MenuLink({
       </a>
     );
   }
+}
+
+function SocialLink({
+  href,
+  name,
+  imgSrc,
+  imgClassName,
+}: {
+  href: string;
+  name: string;
+  imgSrc: string;
+  imgClassName: string;
+}) {
+  return (
+    <a
+      href={href}
+      className="h-10 w-10 flex items-center justify-center group bg-transparent hover:bg-gradient-to-r from-white/10 to-white/5 rounded-full transition-all duration-300"
+    >
+      <img
+        className={classNames(
+          "opacity-75 group-hover:opacity-100 transition-all",
+          imgClassName,
+        )}
+        src={imgSrc}
+        alt={name}
+      />
+    </a>
+  );
 }
