@@ -54,7 +54,7 @@ export function Home() {
               className="h-[336px]"
               logoSrc={councilLogo}
               logoAltText="Council"
-              description="An adaptable governance framework to create and manage DAOs."
+              description="An adaptable governance system and a suite of tools that allow a community to create and manage a DAO."
               arc={councilCornerArc}
               onClick={() => openDrawer("council")}
             />

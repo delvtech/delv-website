@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import delvLogo from "src/assets/delv-logo.svg";
 import discordLogo from "src/assets/discord-logo.svg";
@@ -7,24 +7,11 @@ import githubLogo from "src/assets/github-logo.svg";
 import menuIcon from "src/assets/menu-icon.svg";
 import xLogo from "src/assets/x-logo.svg";
 import { CloseButton } from "src/components/CloseButton";
+import { useIsScrolled } from "src/hooks/useIsScrolled";
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const isScrolled = useIsScrolled();
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-
-  function onScroll() {
-    console.log(window.scrollY);
-    if (window.scrollY > 0 && !isScrolled) {
-      setIsScrolled(true);
-    } else if (window.scrollY === 0 && isScrolled) {
-      setIsScrolled(false);
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  });
 
   const onKeyDown = useRef((e: KeyboardEvent) => {
     if (e.key === "Escape") {
@@ -44,32 +31,31 @@ export function Header() {
 
   return (
     <>
-      <header
+      <Link
+        to="/"
         className={classNames(
-          "fixed top-0 left-0 right-0 flex justify-between w-full pt-7 pb-4 px-16 mx-auto z-10 transition-all duration-300",
+          "fixed top-7 left-16 z-10 h-[60px] px-6 -ml-3 bg-black/40 backdrop-blur flex items-center rounded-full overflow-hidden transition-all duration-300",
           {
-            "!py-2": isScrolled,
+            "!top-2": isScrolled,
           },
         )}
       >
-        <Link
-          to="/"
-          className="h-[60px] px-6 -ml-3 bg-black/40 backdrop-blur flex items-center rounded-full overflow-hidden"
-        >
-          <img src={delvLogo} alt="DELV" />
-        </Link>
+        <img src={delvLogo} alt="DELV" />
+      </Link>
 
-        {/* Menu */}
-        <div>
-          <button
-            title="open menu"
-            className="w-[60px] h-[60px] rounded-full border border-white/30 p-0 box-border flex items-center justify-center hover:border-white/60 transition-all bg-black/40 backdrop-blur relative z-50"
-            onClick={openMenu}
-          >
-            <img src={menuIcon} alt="menu" />
-          </button>
-        </div>
-      </header>
+      {/* Menu */}
+      <button
+        title="open menu"
+        className={classNames(
+          "fixed top-7 right-16 w-[60px] h-[60px] rounded-full border border-white/30 p-0 box-border flex items-center justify-center hover:border-white/60 bg-black/40 backdrop-blur z-50 transition-[border,top] duration-[200ms,300ms]",
+          {
+            "!top-3": isScrolled,
+          },
+        )}
+        onClick={openMenu}
+      >
+        <img src={menuIcon} alt="menu" />
+      </button>
 
       {/* drawer overlay */}
       <div
