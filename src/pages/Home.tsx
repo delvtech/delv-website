@@ -226,7 +226,7 @@ export function Home() {
             </p>
           </div>
 
-          <VisitWebsiteButton href="https://governance.element.fi/" />
+          <VisitWebsiteButton href="https://docs.element.fi/" />
         </div>
       </div>
 
