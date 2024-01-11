@@ -35,7 +35,9 @@ export function About() {
 
         <div className="max-w-5xl flex items-end justify-between mx-auto">
           <div className="flex flex-col gap-4 justify-between max-w-72">
-            <p className="text-3xl leading-none">01</p>
+            <p className="text-3xl leading-none bg-gradient-to-br from-[#71F8F8] to-[#c5edff] bg-clip-text text-transparent">
+              01
+            </p>
             <h2 className="text-[82px] font-incise tracking-tight leading-none">
               Mission
             </h2>
@@ -51,31 +53,50 @@ export function About() {
       {/* values */}
       <div className="pt-36 overflow-y-hidden relative">
         <div className="max-w-5xl flex items-start justify-between mx-auto">
-          <div className="flex flex-col gap-4 justify-between max-w-72">
-            <p className="text-3xl leading-none">02</p>
-            <h2 className="text-[82px] font-incise tracking-tight leading-none">
-              Values
-            </h2>
-          </div>
-          <div className="max-w-[440px] flex flex-col gap-8 mt-14 font-blanka">
-            <p>
+          <div className="flex flex-wrap items justify-between gap-16 font-blanka [&_p]:opacity-75">
+            {/* <div className="flex flex-col gap-4 justify-between max-w-72">
+
+              <p className="text-3xl leading-none !text-white">02</p>
+              <h2 className="text-[82px] font-incise tracking-tight leading-none">
+                Values
+              </h2>
+            </div> */}
+
+            <div className="flex flex-col gap-4 justify-between max-w-72">
+              <p className="text-3xl leading-none bg-gradient-to-br from-[#71F8F8] to-[#c5edff] bg-clip-text text-transparent !opacity-100">
+                02
+              </p>
+              <h2 className="text-[82px] font-incise tracking-tight leading-none">
+                Values
+              </h2>
+            </div>
+
+            <p className="basis-[440px] mt-6">
               Core values guide our interactions with one another and the
               community at large. They are deeply ingrained beliefs about who we
               are as a collective and anchor our company culture. Values are the
               moral code of our organization.
             </p>
-            <div>
-              <h3 className="font-bold mb-2 font-incise text-2xl">
-                Building For People
-              </h3>
+            <div className="basis-[440px]">
+              <h3 className="mb-2 font-incise text-4xl">Building For People</h3>
               <p>
                 We believe in the creation, promotion, and advancement of
                 decentralized system for benefit of present and future
                 generations.
               </p>
             </div>
-            <div>
-              <h3 className="font-bold mb-2 font-incise text-2xl">
+            <div className="basis-[440px]">
+              <h3 className="mb-2 font-incise text-4xl">
+                Principles Over Hype
+              </h3>
+              <p>
+                We believe in unpacking the fundamental concepts and assumptions
+                on which theories, systems, or methods are based, we don’t chase
+                trends.
+              </p>
+            </div>
+            <div className="basis-[440px]">
+              <h3 className="mb-2 font-incise text-4xl">
                 (Appropriate) Openness
               </h3>
               <p>
@@ -85,18 +106,8 @@ export function About() {
                 resource.
               </p>
             </div>
-            <div>
-              <h3 className="font-bold mb-2 font-incise text-2xl">
-                Principles Over Hype
-              </h3>
-              <p>
-                We believe in unpacking the fundamental concepts and assumptions
-                on which theories, systems, or methods are based, we don’t chase
-                trends.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold mb-2 font-incise text-2xl">Integrity</h3>
+            <div className="basis-[440px]">
+              <h3 className="mb-2 font-incise text-4xl">Integrity</h3>
               <p>
                 We believe in working capably, reliably, honestly, and
                 benevolently towards our mission, even when no one is looking.
@@ -118,9 +129,11 @@ export function About() {
       {/* guiding principles */}
       <div className="pb-32 overflow-y-hidden relative">
         <div className="max-w-5xl flex items-start justify-between mx-auto">
-          <div className="flex flex-wrap items justify-between gap-16 font-blanka">
+          <div className="flex flex-wrap items justify-between gap-16 font-blanka [&_p]:opacity-75">
             <div className="flex flex-col gap-4 justify-between max-w-72">
-              <p className="text-3xl leading-none">03</p>
+              <p className="text-3xl leading-none bg-gradient-to-br from-[#71F8F8] to-[#c5edff] bg-clip-text text-transparent !opacity-100">
+                03
+              </p>
               <h2 className="text-[82px] font-incise tracking-tight leading-none">
                 Guiding Principles
               </h2>
@@ -132,66 +145,54 @@ export function About() {
               action, decision, or move the team makes.
             </p>
             <div className="basis-[440px]">
-              <h3 className="font-bold mb-2 font-incise text-2xl">
+              <h3 className="mb-2 font-incise text-4xl">
                 Results Over Everything
               </h3>
               <p>
-                <span className="font-bold font-incise text-lg">
-                  Extraordinary claims require extraordinary proof.
-                </span>{" "}
-                We are committed to research, develop, and ship our work with
-                clear and convincing results. We ruthlessly prioritize towards
-                producing these results.
+                Extraordinary claims require extraordinary proof. We are
+                committed to research, develop, and ship our work with clear and
+                convincing results. We ruthlessly prioritize towards producing
+                these results.
               </p>
             </div>
             <div className="basis-[440px]">
-              <h3 className="font-bold mb-2 font-incise text-2xl">
+              <h3 className="mb-2 font-incise text-4xl">Lead by Example</h3>
+              <p>
+                Our behaviors model what we expect of one other. This includes
+                taking pride in our work, setting standards of excellence,
+                anticipating needs, being proactive, thinking long-term, and
+                uplifting our teammates.
+              </p>
+            </div>
+            <div className="basis-[440px]">
+              <h3 className="mb-2 font-incise text-4xl">
                 Make It safe and approachable
               </h3>
               <p>
-                <span className="font-bold font-incise text-lg">
-                  Safety is a precondition to usability and adoption.
-                </span>{" "}
-                We go the extra mile to build our product in ways that make them
-                as safe and easy as possible for everyone.
+                Safety is a precondition to usability and adoption. We go the
+                extra mile to build our product in ways that make them as safe
+                and easy as possible for everyone.
               </p>
             </div>
             <div className="basis-[440px]">
-              <h3 className="font-bold mb-2 font-incise text-2xl">
-                Lead by Example
-              </h3>
-              <p>
-                <span className="font-bold font-incise text-lg">
-                  Our behaviors model what we expect of one other.
-                </span>{" "}
-                This includes taking pride in our work, setting standards of
-                excellence, anticipating needs, being proactive, thinking
-                long-term, and uplifting our teammates.
-              </p>
-            </div>
-            <div className="basis-[440px]">
-              <h3 className="font-bold mb-2 font-incise text-2xl">
+              <h3 className="mb-2 font-incise text-4xl">
                 Cultivate Curiosity and Continuous Learning
               </h3>
               <p>
-                <span className="font-bold font-incise text-lg">
-                  There is always more to learn (especially in new markets).
-                </span>{" "}
-                We stay inquisitive and ask &lsquo;why&rsquo; to build new
+                There is always more to learn (especially in new markets). We
+                stay inquisitive and ask &lsquo;why&rsquo; to build new
                 perspectives. We encourage sharing knowledge and resources, both
                 1-on-1 and in groups, for our ongoing professional development.
               </p>
             </div>
             <div className="basis-[440px]">
-              <h3 className="font-bold mb-2 font-incise text-2xl">
+              <h3 className="mb-2 font-incise text-4xl">
                 Foster Clear Communication and active Collaboration
               </h3>
               <p>
-                <span className="font-bold font-incise text-lg">
-                  We engage each other with context, clear expectations, and
-                  tools to collaborate well, both within and across our teams.
-                </span>{" "}
-                This includes creating channels and spaces for both open
+                We engage each other with context, clear expectations, and tools
+                to collaborate well, both within and across our teams. This
+                includes creating channels and spaces for both open
                 communication and cross-team cooperation to improve our
                 productivity and work quality.
               </p>
