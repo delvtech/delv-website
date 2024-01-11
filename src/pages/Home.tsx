@@ -62,6 +62,7 @@ export function Home() {
               className="h-[432px]"
               logoSrc={hyperdriveLogo}
               logoAltText="Hyperdrive"
+              logoClassName="-mb-[10px]"
               description="Hyperdrive is a new AMM for fixed and variable yield positions underpinned by a novel pricing mechanism. It enables terms on-demand and removes the need for liquidity providers to roll over their capital allocations. Additionally, its mechanism design enables a more efficient, symmetrical yield market and is open source for others to build upon."
               arc={hyperdriveCornerArc}
               arcClassName="opacity-100"
@@ -280,6 +281,7 @@ type DrawerName = (typeof drawerNames)[number];
 function ProjectCard({
   logoSrc,
   logoAltText,
+  logoClassName,
   description,
   onClick,
   className,
@@ -288,6 +290,7 @@ function ProjectCard({
 }: {
   logoSrc: string;
   logoAltText?: string;
+  logoClassName?: string;
   description: string;
   onClick: () => void;
   className?: string;
@@ -303,20 +306,23 @@ function ProjectCard({
     >
       <button
         onClick={onClick}
-        className="clip-corners bg-[#053E3E] px-10 pt-10 pb-8 flex flex-col gap-2 bg-blend-soft-light bg-texture relative group-hover:bg-[#0A0B0B] transition-all duration-300"
+        className="clip-corners bg-[#053E3E] px-10 pt-10 pb-8 flex flex-col justify-between bg-blend-soft-light bg-texture relative group-hover:bg-[#0A0B0B] transition-all duration-300"
       >
         <img
           src={logoSrc}
           alt={logoAltText}
-          className="group-hover:scale-75 origin-top-left transition-all duration-300"
+          className={classNames(
+            "group-hover:scale-75 origin-top-left transition-all duration-300",
+            logoClassName,
+          )}
         />
-        <p className="mt-2 mb-0 text-left opacity-0 group-hover:opacity-100 transition-all duration-300">
+        <p className="my-auto pb-14 text-left opacity-0 group-hover:opacity-100 transition-all duration-300">
           {description}
         </p>
 
         {/* arrow */}
         <svg
-          className="mt-auto ml-auto block mix-blend-soft-light opacity-60 group-hover:mix-blend-normal group-hover:opacity-100 transition-all duration-300 w-10 h-10 group-hover:scale-[200%] origin-bottom-right stroke-white group-hover:stroke-[.5px]"
+          className="absolute right-10 bottom-8 mix-blend-soft-light opacity-60 group-hover:mix-blend-normal group-hover:opacity-100 transition-all duration-300 w-10 h-10 group-hover:scale-150 origin-bottom-right stroke-white group-hover:stroke-[.5px]"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
