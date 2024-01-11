@@ -116,7 +116,7 @@ export function Home() {
         <div className="absolute w-[757.166px] h-[758.23px] left-[-251.67px] bottom-[-313.08px] bg-[#46516F] opacity-80 blur-[70px] rounded-full"></div>
         <img
           src={councilGraphic}
-          className="absolute block left-[-192px] bottom-[-240px]"
+          className="absolute block left-[-192px] bottom-[-240px] max-xl:opacity-50 transition-all"
         />
 
         {/* close button */}
@@ -129,8 +129,8 @@ export function Home() {
           className="mt-12 h-[60px] relative"
         />
 
-        <div className="w-96 absolute right-24 top-1/3">
-          <div className="flex flex-col gap-[1em] opacity-80 text-lg font-blanka leading-snug mb-8">
+        <div className="w-96 absolute right-[7vw] bottom-[10vh]">
+          <div className="flex flex-col gap-[1em] opacity-80 text-lg font-blanka leading-snug mb-8 [text-shadow:0_0_5px_#191E31,1px_1px_#191E31]">
             <p>
               Council represents the next evolution of on-chain governance,
               allowing anyone to build adaptable governance systems that meet
@@ -169,10 +169,10 @@ export function Home() {
         <img
           src={hyperdriveLogo}
           alt="Hyperdrive"
-          className="mt-10 h-[140px] relative"
+          className="mt-10 h-[180px] relative"
         />
 
-        <div className="w-96 absolute right-24 bottom-24">
+        <div className="w-[440px] absolute right-[10vw] bottom-[10vw]">
           <p className="opacity-80 text-lg font-blanka leading-snug mb-8 [text-shadow:0_0_5px_black,1px_1px_black]">
             Hyperdrive is a protocol for trading interest-bearing assets at a
             discount, which can be redeemed for their face value at maturity. Go
@@ -196,7 +196,7 @@ export function Home() {
         <div className="absolute w-[942px] h-[943px] top-[-245px] left-[-321px] bg-[#224BAD] blur-[100px] rounded-full"></div>
         <img
           src={elementBalls}
-          className="absolute block w-[853px] h-[715px] top-[-193.18px] left-[-296.33px]"
+          className="absolute block w-[853px] h-[715px] top-[-193.18px] left-[-296.33px] max-2xl:opacity-50 transition-all"
         />
 
         {/* close button */}
@@ -206,11 +206,11 @@ export function Home() {
         <img
           src={elementLogo}
           alt="Element"
-          className="mt-16 h-[76px] relative"
+          className="mt-16 h-[92px] relative"
         />
 
-        <div className="w-96 absolute right-28 top-1/3">
-          <div className="flex flex-col gap-[1em] opacity-80 text-lg font-blanka leading-snug mb-8">
+        <div className="w-96 absolute right-[10vw] bottom-[15vh]">
+          <div className="flex flex-col gap-[1em] opacity-80 text-lg font-blanka leading-snug mb-8 [text-shadow:0_0_5px_#2D59AF,1px_1px_#2D59AF]">
             <p>
               Our journey into DeFi started with the Element Protocol back in
               2020. Element enables users to access fixed income in the DeFi
@@ -254,7 +254,7 @@ export function Home() {
         <img
           src={elfiverseLogo}
           alt="Elfiverse"
-          className="mt-12 h-[60px] relative"
+          className="mt-12 h-[72px] relative"
         />
 
         <div className="w-96 absolute right-24 top-1/2">
