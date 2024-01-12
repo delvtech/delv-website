@@ -107,7 +107,7 @@ export function Home() {
       {/* council drawer */}
       <ProjectDrawer
         className="bg-[#191E31]"
-        insideClassName="!min-h-[800px] max-md:min-h-full h-screen max-md:h-full"
+        insideClassName="!min-h-[800px] max-md:!min-h-full h-screen max-md:h-auto"
         isOpen={openedDrawer === "council"}
         onClose={closeDrawer}
       >
@@ -151,7 +151,7 @@ export function Home() {
       {/* hyperdrive drawer */}
       <ProjectDrawer
         className="bg-[url(/public/hyperdrive-graphic.png)] bg-no-repeat bg-right-bottom bg-cover bg-[#191E31] shadow-[inset_-100px_5vh_9999px_100px_rgba(0,0,0,.75),inset_-400px_-200px_9999px_100px_rgba(0,0,0,.8)]"
-        insideClassName="min-h-[620px] max-md:min-h-full"
+        insideClassName="!min-h-[620px] max-md:!min-h-full"
         isOpen={openedDrawer === "hyperdrive"}
         onClose={closeDrawer}
       >
@@ -175,7 +175,7 @@ export function Home() {
       {/* element drawer */}
       <ProjectDrawer
         className="bg-gradient-to-br from-[#2D59AF] to-[#466CB7]"
-        insideClassName="!min-h-[740px] max-md:min-h-full h-screen max-md:h-full"
+        insideClassName="!min-h-[740px] max-md:!min-h-full h-screen max-md:h-auto"
         isOpen={openedDrawer === "element"}
         onClose={closeDrawer}
       >
@@ -215,7 +215,7 @@ export function Home() {
       {/* elfiverse drawer */}
       <ProjectDrawer
         className="bg-[#191E31]"
-        insideClassName="!min-h-[640px] max-md:min-h-full h-screen max-md:h-full"
+        insideClassName="!min-h-[640px] max-md:!min-h-full h-screen max-md:h-auto"
         closeButtonClassName="!bg-[#191E31]/75 backdrop-blur-sm"
         isOpen={openedDrawer === "elfiverse"}
         onClose={closeDrawer}
@@ -389,7 +389,7 @@ function ProjectDrawer({
 function VisitWebsiteButton({ href }: { href: string }) {
   return (
     <a
-      className="backdrop-blur-lg bg-gradient-to-b from-white/30 to-white/15 hover:from-white/20 hover:to-white/10 rounded-full h-12 pl-6 pr-4 gap-2 inline-flex items-center transition-all max-md:w-full justify-center max-md:h-[60px] max-md:text-xl"
+      className="backdrop-blur-lg bg-gradient-to-b from-white/30 to-white/15 hover:from-white/20 hover:to-white/10 rounded-full h-12 pl-6 pr-4 gap-2 inline-flex items-center transition-all max-md:w-full justify-center max-md:h-[60px] max-md:text-xl [text-shadow:0_0_5px_rgba(0,0,0,.5)]"
       href={href}
     >
       Visit Website
