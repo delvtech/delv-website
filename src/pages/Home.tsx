@@ -150,7 +150,7 @@ export function Home() {
 
       {/* hyperdrive drawer */}
       <ProjectDrawer
-        className="bg-[url(/public/hyperdrive-graphic.png)] bg-no-repeat bg-right-bottom bg-cover bg-[#191E31] shadow-[inset_-100px_5vh_9999px_100px_rgba(0,0,0,.75),inset_-400px_-200px_9999px_100px_rgba(0,0,0,.8)]"
+        className="bg-[url(/public/hyperdrive-graphic.png)] bg-no-repeat bg-right-bottom bg-cover bg-[#191E31] shadow-[inset_-100px_5vh_9999px_100px_rgba(0,0,0,.75),inset_-400px_-200px_9999px_100px_rgba(0,0,0,.8)] max-md:!bg-center max-md:shadow-[inset_-100px_5vh_9999px_100px_rgba(0,0,0,.5),inset_-400px_-200px_9999px_100px_rgba(0,0,0,.6)]"
         insideClassName="!min-h-[620px] max-md:!min-h-full h-screen max-md:h-auto"
         isOpen={openedDrawer === "hyperdrive"}
         onClose={closeDrawer}
