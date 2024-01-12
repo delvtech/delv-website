@@ -77,7 +77,7 @@ export function Header() {
           },
         )}
       >
-        <img src={delvLogo} alt="DELV" className="absolute top-8 left-[5vw] h-8 mt-3" />
+        <img src={delvLogo} alt="DELV" className="absolute top-8 left-[5vw] h-8 mt-3 md:hidden" />
         <CloseButton onClick={closeMenu} />
         <div className="mb-20">
           <MenuLink to="/about" onClick={closeMenu}>
