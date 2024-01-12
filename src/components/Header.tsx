@@ -34,7 +34,7 @@ export function Header() {
       <Link
         to="/"
         className={classNames(
-          "fixed top-7 left-16 z-10 h-[60px] px-6 -ml-3 bg-black/40 backdrop-blur flex items-center rounded-full overflow-hidden transition-all duration-300",
+          "fixed top-7 left-16 max-lg:left-[5vw] z-10 h-[60px] px-6 -ml-3 bg-black/40 backdrop-blur flex items-center rounded-full overflow-hidden transition-all duration-300",
           {
             "!top-2": isScrolled,
           },
@@ -47,7 +47,7 @@ export function Header() {
       <button
         title="open menu"
         className={classNames(
-          "fixed top-7 right-16 w-[60px] h-[60px] rounded-full border border-white/30 p-0 box-border flex items-center justify-center hover:border-white/60 bg-black/40 backdrop-blur z-50 transition-[border,top] duration-[200ms,300ms]",
+          "fixed top-7 right-16 max-lg:right-[5vw] w-[60px] h-[60px] rounded-full border border-white/30 p-0 box-border flex items-center justify-center hover:border-white/60 bg-black/40 backdrop-blur z-50 transition-[all,top] duration-[200ms,300ms]",
           {
             "!top-3": isScrolled,
           },

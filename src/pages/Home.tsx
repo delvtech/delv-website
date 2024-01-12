@@ -42,17 +42,17 @@ export function Home() {
       <FlairUp className="fixed top-0 left-1/2 -translate-x-1/2 z-[-1]" />
       <FlairDown className="fixed bottom-0 left-1/2 -translate-x-1/2 z-[-1]" />
 
-      <div className="max-w-[1440px] mx-auto px-20 mt-32 flex gap-5 max-xl:flex-col">
+      <main className="max-w-[1440px] mx-auto px-20 max-xl:px-[5vw] mt-32 flex gap-5 max-xl:flex-col max-xl:max-w-[850px] box-content">
         {/* Left (title + first 2 titles) */}
         <div className="flex flex-col justify-between max-xl:items-center">
-          <h1 className="font-incise text-[82px] w-[600px] tracking-tight leading-none -mt-2 max-xl:w-full max-xl:mb-10">
+          <h1 className="font-incise text-[82px] max-xl:text-[60px] max-xs:text-5xl max-xs:text-center w-[600px] max-xl:w-full tracking-tight leading-none -mt-2 max-xl:mt-5 mb-10 max-xl:mb-16">
             New Protocols for{" "}
             <span className="whitespace-nowrap">New Markets</span>
           </h1>
 
-          <div className="flex items-end gap-5 max-xl:flex-row-reverse">
+          <div className="flex items-end gap-5 max-xl:flex-row-reverse max-md:flex-col-reverse">
             <ProjectCard
-              className="h-[336px]"
+              className="h-[336px] max-md:h-auto max-md:min-h-[280px]"
               logoSrc={councilLogo}
               logoAltText="Council"
               description="An adaptable governance system and a suite of tools that allow a community to create and manage a DAO."
@@ -60,7 +60,7 @@ export function Home() {
               onClick={() => openDrawer("council")}
             />
             <ProjectCard
-              className="h-[432px]"
+              className="h-[432px] max-md:h-auto"
               logoSrc={hyperdriveLogo}
               logoAltText="Hyperdrive"
               logoClassName="-mb-[10px]"
@@ -73,9 +73,9 @@ export function Home() {
         </div>
 
         {/* Right */}
-        <div className="flex flex-col max-xl:flex-row max-xl:justify-center gap-5">
+        <div className="flex flex-col sm:max-xl:flex-row max-xl:justify-center gap-5">
           <ProjectCard
-            className="h-64"
+            className="h-64 flex-1 max-sm:h-auto max-sm:min-h-[280px]"
             logoSrc={elementLogo}
             logoAltText="Element"
             description="Element is an an open-source protocol for fixed and variable yield markets."
@@ -83,7 +83,7 @@ export function Home() {
             onClick={() => openDrawer("element")}
           />
           <ProjectCard
-            className="h-[348px]"
+            className="h-[348px] flex-1 max-sm:h-auto max-sm:min-h-[280px]"
             logoSrc={elfiverseLogo}
             logoAltText="Elfiverse"
             description="An endeavor to intersect the DeFi and NFT worlds for community building, introducing new possibilities for governance."
@@ -91,7 +91,7 @@ export function Home() {
             onClick={() => openDrawer("elfiverse")}
           />
         </div>
-      </div>
+      </main>
 
       {/* drawer overlay */}
       <div
@@ -276,7 +276,7 @@ function ProjectCard({
   return (
     <div
       className={classNames(
-        "clip-corners bg-gradient-to-br from-white via-[#14D7D9] via-20% to-[#1A1F31] flex p-[1px] max-w-[415px] group hover:via-[#13F3F3] hover:via-40% hover:to-[#0D9999]",
+        "clip-corners bg-gradient-to-br from-white via-[#14D7D9] via-20% to-[#1A1F31] flex p-[1px] max-w-[415px] max-md:max-w-full group hover:via-[#13F3F3] hover:via-40% hover:to-[#0D9999]",
         className,
       )}
     >
