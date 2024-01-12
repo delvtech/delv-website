@@ -10,7 +10,7 @@ export function About() {
 
         {/* black circle */}
         <div className="absolute w-[1104px] h-[1104px] rounded-full bg-black left-1/2 -translate-x-1/2 top-10 max-md:scale-75"></div>
-        <div className="absolute bg-grid w-full h-full [clip-path:circle(552px_at_50%_592px)] max-md:scale-75"></div>
+        <div className="absolute bg-grid w-full h-full [clip-path:circle(552px_at_50%_592px)]"></div>
 
         {/* bottom shadow */}
         <div className="absolute w-full h-[440px] bg-gradient-to-b from-transparent to-black bottom-0"></div>
@@ -112,12 +112,12 @@ export function About() {
       </div>
 
       {/* glow */}
-      <div className="relative h-96 max-md:scale-50 max-md:-translate-x-1/4 max-md:w-[200%] overflow-hidden max-md:-mt-10 mb-14 max-md:-mb-10">
-        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-[#10F9B1] w-[1700px] h-[933px] top-[224px] blur-[100px]"></div>
-        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-[#9F79FF] w-[1310px] h-[879px] top-[255px] blur-[100px]"></div>
-        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-white w-[1440px] h-[980px] top-[222px] blur-xl"></div>
-        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-black w-[2022px] h-[980px] top-[237px]"></div>
-        <div className="absolute bg-grid w-full h-full [clip-path:ellipse(1011px_490px_at_50%_727px)] bg-[0_86px] max-md:scale-[200%] max-md:bg-[0_96px]"></div>
+      <div className="relative h-96 overflow-hidden max-md:-mt-10 mb-14 max-md:-mb-10">
+        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-[#10F9B1] w-[1700px] h-[933px] top-[224px] blur-[100px] max-md:scale-50 origin-top"></div>
+        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-[#9F79FF] w-[1310px] h-[879px] top-[255px] blur-[100px] max-md:scale-50 origin-top"></div>
+        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-white w-[1440px] h-[980px] top-[222px] blur-xl max-md:scale-50 origin-top"></div>
+        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-black w-[2022px] h-[980px] top-[237px] max-md:scale-50 origin-top"></div>
+        <div className="absolute bg-grid w-full h-full [clip-path:ellipse(1011px_490px_at_50%_727px)] bg-[0_86px]"></div>
       </div>
 
       {/* guiding principles */}
