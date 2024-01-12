@@ -71,67 +71,62 @@ export function Header() {
       {/* menu drawer */}
       <div
         className={classNames(
-          "fixed w-[360px] top-0 right-[-360px] h-screen bg-black transition-all duration-300 pt-[15vh] z-50",
+          "fixed w-[360px] max-md:w-full top-0 right-[-360px] max-md:-right-full bottom-0 bg-black flex flex-col transition-all duration-300 pt-32 z-50 overflow-auto",
           {
             "!right-0": menuOpen,
           },
         )}
       >
+        <img src={delvLogo} alt="DELV" className="absolute top-8 left-[5vw] h-8 mt-3" />
         <CloseButton onClick={closeMenu} />
+        <div className="mb-20">
+          <MenuLink to="/about" onClick={closeMenu}>
+            About
+          </MenuLink>
+          <MenuLink href="https://www.github.com/delvtech" onClick={closeMenu}>
+            Build
+          </MenuLink>
+          <MenuLink
+            href="https://wellfound.com/company/delv-tech/jobs"
+            onClick={closeMenu}
+          >
+            Careers
+          </MenuLink>
+          <MenuLink href="https://blog.delv.tech" onClick={closeMenu}>
+            Blog
+          </MenuLink>
+        </div>
 
-        <div className="flex flex-col h-full">
-          <div>
-            <MenuLink to="/about" onClick={closeMenu}>
-              About
-            </MenuLink>
-            <MenuLink
-              href="https://www.github.com/delvtech"
-              onClick={closeMenu}
-            >
-              Build
-            </MenuLink>
-            <MenuLink
-              href="https://wellfound.com/company/delv-tech/jobs"
-              onClick={closeMenu}
-            >
-              Careers
-            </MenuLink>
-            <MenuLink href="https://blog.delv.tech" onClick={closeMenu}>
-              Blog
-            </MenuLink>
+        {/* menu footer */}
+        <div className="flex gap-2 mt-auto px-8 py-2 items-center">
+          <div className="flex gap-2">
+            <SocialLink
+              href="https://discord.gg/EEfKmfQdtx"
+              name="Discord"
+              imgSrc={discordLogo}
+              imgClassName="w-7 h-7"
+            />
+            <SocialLink
+              href="https://twitter.com/delv_tech"
+              name="X"
+              imgSrc={xLogo}
+              imgClassName="w-5 h-5"
+            />
+            <SocialLink
+              href="https://github.com/delvtech"
+              name="GitHub"
+              imgSrc={githubLogo}
+              imgClassName="w-7 h-7"
+            />
           </div>
-
-          {/* menu footer */}
-          <div className="flex gap-2 mt-auto px-8 py-2 items-center">
-            <div className="flex gap-2">
-              <SocialLink
-                href="https://discord.gg/EEfKmfQdtx"
-                name="Discord"
-                imgSrc={discordLogo}
-                imgClassName="w-7 h-7"
-              />
-              <SocialLink
-                href="https://twitter.com/delv_tech"
-                name="X"
-                imgSrc={xLogo}
-                imgClassName="w-5 h-5"
-              />
-              <SocialLink
-                href="https://github.com/delvtech"
-                name="GitHub"
-                imgSrc={githubLogo}
-                imgClassName="w-7 h-7"
-              />
-            </div>
-            <a
-              href="https://elementfi.s3.us-east-2.amazonaws.com/element-finance-terms-of-service.pdf"
-              className="opacity-75 hover:opacity-100 ml-auto"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Terms
-            </a>
-          </div>
+          <a
+            href="https://elementfi.s3.us-east-2.amazonaws.com/element-finance-terms-of-service.pdf"
+            className="opacity-75 hover:opacity-100 ml-auto"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Terms
+          </a>
         </div>
       </div>
     </>

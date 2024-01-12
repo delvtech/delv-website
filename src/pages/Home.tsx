@@ -42,7 +42,7 @@ export function Home() {
       <FlairUp className="fixed top-0 left-1/2 -translate-x-1/2 z-[-1]" />
       <FlairDown className="fixed bottom-0 left-1/2 -translate-x-1/2 z-[-1]" />
 
-      <main className="max-w-[1440px] mx-auto px-20 max-xl:px-[5vw] mt-32 flex gap-5 max-xl:flex-col max-xl:max-w-[850px] box-content">
+      <main className="max-w-[1440px] px-20 max-xl:px-[5vw] mt-32 flex justify-center mx-auto gap-5 max-xl:flex-col max-xl:max-w-[850px] box-content">
         {/* Left (title + first 2 titles) */}
         <div className="flex flex-col justify-between max-xl:items-center">
           <h1 className="font-incise text-[82px] max-xl:text-[60px] max-xs:text-5xl max-xs:text-center w-[600px] max-xl:w-full tracking-tight leading-none -mt-2 max-xl:mt-5 mb-10 max-xl:mb-16">
