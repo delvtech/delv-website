@@ -278,7 +278,8 @@ function ProjectCard({
   return (
     <div
       className={classNames(
-        "clip-corners bg-gradient-to-br from-white via-[#14D7D9] via-20% to-[#1A1F31] flex p-[1px] max-w-[415px] max-md:max-w-full group hover:via-[#13F3F3] hover:via-40% hover:to-[#0D9999]",
+        "clip-corners bg-gradient-to-br from-white via-[#14D7D9] via-20% to-[#1A1F31] flex p-[1px] max-w-[415px] max-md:max-w-full",
+        "md:hover:via-[#13F3F3] md:hover:via-40% md:hover:to-[#0D9999] md:group",
         className,
       )}
     >
@@ -300,7 +301,7 @@ function ProjectCard({
 
         {/* arrow */}
         <svg
-          className="absolute right-10 bottom-8 mix-blend-soft-light opacity-60 group-hover:mix-blend-normal group-hover:opacity-100 transition-all duration-300 w-10 h-10 group-hover:scale-150 origin-bottom-right stroke-white group-hover:stroke-[.5px]"
+          className="absolute right-10 bottom-8 mix-blend-soft-light opacity-60 max-md:opacity-100 group-hover:mix-blend-normal group-hover:opacity-100 transition-all duration-300 w-10 h-10 group-hover:scale-150 origin-bottom-right stroke-white group-hover:stroke-[.5px]"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -377,7 +378,10 @@ function ProjectDrawer({
         >
           <CloseButton
             onClick={onClose}
-            className={classNames("backdrop-blur max-md:fixed max-md:top-16 max-md:right-[calc(32px_+_5vw)]", closeButtonClassName)}
+            className={classNames(
+              "backdrop-blur max-md:fixed max-md:top-16 max-md:right-[calc(32px_+_5vw)]",
+              closeButtonClassName,
+            )}
           />
           {children}
         </div>
