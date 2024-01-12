@@ -107,7 +107,7 @@ export function Home() {
       {/* council drawer */}
       <ProjectDrawer
         className="bg-[#191E31]"
-        insideClassName="!min-h-[800px] !max-md:min-h-full h-screen max-md:h-auto"
+        insideClassName="!min-h-[800px] max-md:min-h-full h-screen max-md:h-full"
         isOpen={openedDrawer === "council"}
         onClose={closeDrawer}
       >
@@ -216,7 +216,7 @@ export function Home() {
       <ProjectDrawer
         className="bg-[#191E31]"
         insideClassName="!min-h-[640px] max-md:min-h-full h-screen max-md:h-full"
-        closeButtonClassName="bg-[#191E31]/50 backdrop-blur-sm"
+        closeButtonClassName="bg-[#191E31]/75 backdrop-blur-sm"
         isOpen={openedDrawer === "elfiverse"}
         onClose={closeDrawer}
       >
@@ -389,7 +389,7 @@ function ProjectDrawer({
 function VisitWebsiteButton({ href }: { href: string }) {
   return (
     <a
-      className="backdrop-blur-lg bg-gradient-to-b from-white/30 to-white/15 hover:from-white/20 hover:to-white/10 rounded-full h-12 pl-6 pr-4 gap-2 inline-flex items-center transition-all max-md:w-full justify-center"
+      className="backdrop-blur-lg bg-gradient-to-b from-white/30 to-white/15 hover:from-white/20 hover:to-white/10 rounded-full h-12 pl-6 pr-4 gap-2 inline-flex items-center transition-all max-md:w-full justify-center max-md:h-[60px] max-md:text-xl"
       href={href}
     >
       Visit Website
