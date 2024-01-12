@@ -5,6 +5,7 @@ export default {
     extend: {
       screens: {
         xs: "425px",
+        mlg: "864px"
       },
       fontFamily: {
         blanka: ["f37blanka"],

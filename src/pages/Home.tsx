@@ -107,7 +107,7 @@ export function Home() {
       {/* council drawer */}
       <ProjectDrawer
         className="bg-[#191E31]"
-        insideClassName="min-h-[760px]"
+        insideClassName="!min-h-[800px] !max-md:min-h-full h-screen max-md:h-auto"
         isOpen={openedDrawer === "council"}
         onClose={closeDrawer}
       >
@@ -121,10 +121,10 @@ export function Home() {
         <img
           src={councilLogo}
           alt="Council"
-          className="mt-12 h-[60px] relative"
+          className="mt-20 ml-[2vw] max-lg:ml-0 h-[60px] relative"
         />
 
-        <div className="w-96 absolute right-[7vw] bottom-[10vh]">
+        <div className="w-96 max-lg:w-full absolute right-[7vw] bottom-[10vh] max-lg:static mt-10">
           <div className="flex flex-col gap-[1em] opacity-80 text-lg font-blanka leading-snug mb-8 [text-shadow:0_0_5px_#191E31,1px_1px_#191E31]">
             <p>
               Council represents the next evolution of on-chain governance,
@@ -151,17 +151,17 @@ export function Home() {
       {/* hyperdrive drawer */}
       <ProjectDrawer
         className="bg-[url(/public/hyperdrive-graphic.png)] bg-no-repeat bg-right-bottom bg-cover bg-[#191E31] shadow-[inset_-100px_5vh_9999px_100px_rgba(0,0,0,.75),inset_-400px_-200px_9999px_100px_rgba(0,0,0,.8)]"
-        insideClassName="min-h-[620px]"
+        insideClassName="min-h-[620px] max-md:min-h-full"
         isOpen={openedDrawer === "hyperdrive"}
         onClose={closeDrawer}
       >
         <img
           src={hyperdriveLogo}
           alt="Hyperdrive"
-          className="mt-10 h-[180px] relative"
+          className="mt-20 ml-[2vw] max-lg:ml-0 h-[180px] relative"
         />
 
-        <div className="w-[440px] absolute right-[10vw] bottom-[10vw]">
+        <div className="w-[440px] max-lg:w-full absolute right-[10vw] bottom-[10vw] max-lg:static mt-6">
           <p className="opacity-80 text-lg font-blanka leading-snug mb-8 [text-shadow:0_0_5px_black,1px_1px_black]">
             Hyperdrive is a protocol for trading interest-bearing assets at a
             discount, which can be redeemed for their face value at maturity. Go
@@ -175,7 +175,7 @@ export function Home() {
       {/* element drawer */}
       <ProjectDrawer
         className="bg-gradient-to-br from-[#2D59AF] to-[#466CB7]"
-        insideClassName="min-h-[760px]"
+        insideClassName="!min-h-[740px] max-md:min-h-full h-screen max-md:h-full"
         isOpen={openedDrawer === "element"}
         onClose={closeDrawer}
       >
@@ -192,7 +192,7 @@ export function Home() {
           className="mt-16 h-[92px] relative"
         />
 
-        <div className="w-96 absolute right-[10vw] bottom-[15vh]">
+        <div className="w-96 max-lg:w-full absolute right-[10vw] bottom-[15vh] max-lg:static mt-10">
           <div className="flex flex-col gap-[1em] opacity-80 text-lg font-blanka leading-snug mb-8 [text-shadow:0_0_5px_#2D59AF,1px_1px_#2D59AF]">
             <p>
               Our journey into DeFi started with the Element Protocol back in
@@ -214,26 +214,28 @@ export function Home() {
 
       {/* elfiverse drawer */}
       <ProjectDrawer
-        className="clip-drawer fixed h-screen bg-[#191E31]"
+        className="bg-[#191E31]"
+        insideClassName="!min-h-[640px] max-md:min-h-full h-screen max-md:h-full"
+        closeButtonClassName="bg-[#191E31]/50 backdrop-blur-sm"
         isOpen={openedDrawer === "elfiverse"}
         onClose={closeDrawer}
       >
         <img
           src={elfiverseGraphicTopRight}
-          className="absolute block top-[-115px] right-[-12px]"
+          className="absolute block top-[-115px] right-[-12px] md:max-lg:opacity-50 transition-all max-md:scale-75 origin-top-right"
         />
         <img
           src={elfiverseGraphicBottomLeft}
-          className="absolute block left-[-15px] bottom-[-44px]"
+          className="absolute block left-[-15px] bottom-[-44px] md:max-lg:opacity-50 transition-all max-md:scale-75 origin-bottom-left"
         />
 
         <img
           src={elfiverseLogo}
           alt="Elfiverse"
-          className="mt-12 h-[72px] relative"
+          className="mt-12 h-[72px] relative max-lg:mt-20"
         />
 
-        <div className="w-96 absolute right-24 top-1/2">
+        <div className="w-96 max-lg:w-full absolute right-[10vw] bottom-[16vh] max-lg:static mt-10">
           <p className="opacity-80 text-lg font-blanka leading-snug mb-8 [text-shadow:0_0_5px_#191E31,1px_1px_#191E31]">
             The launch of the Elfiverse signifies our first series of generative
             portraits of Element elves gifted to the community to commemorate
@@ -334,36 +336,49 @@ function ProjectDrawer({
   insideClassName,
   onClose,
   children,
+  closeButtonClassName,
 }: {
   children: React.ReactNode;
   isOpen: boolean;
   onClose: () => void;
   className?: string;
   insideClassName?: string;
+  closeButtonClassName?: string;
 }) {
   return (
     <div
       className={classNames(
-        "clip-drawer fixed h-screen top-0 left-full w-2/3 transition-all duration-300 z-50 overflow-auto",
+        "md:clip-drawer fixed h-screen top-0 left-full w-2/3 transition-all duration-300 z-50 overflow-auto",
+        "max-md:rounded-2xl max-md:top-16 max-md:right-8 max-md:bottom-0 max-md:!left-8 max-md:w-auto max-md:h-auto max-md:opacity-0 max-md:pointer-events-none max-md:bg-gradient-to-br max-md:from-white/70 max-md:via-50% max-md:via-white/70 max-md:to-white/15 max-md:p-px",
         {
           "!left-1/3": isOpen,
+          "max-md:top-8 max-md:!bottom-8 max-md:opacity-100 max-md:pointer-events-auto after:-mt-10":
+            isOpen,
         },
-        className,
       )}
     >
-      {/* min-height container */}
+      {/*
+        A container that sits one px inside the drawer to create a gradient
+        border effect using the drawer's background color.
+      */}
       <div
         className={classNames(
-          "h-screen relative overflow-hidden",
-          insideClassName,
+          "overflow-auto absolute inset-0 max-md:inset-px max-md:rounded-2xl",
+          className,
         )}
       >
-        {/*
-         NOTE: Padding is applied to a non-relative element so that children can
-         be placed relative to the drawer without padding.
-        */}
-        <div className="px-24 py-16">
-          <CloseButton onClick={onClose} />
+        {/* scroll container */}
+        <div
+          className={classNames(
+            "min-h-screen relative overflow-hidden px-24 py-16",
+            "max-md:min-h-full max-md:px-[10vw] max-md:py-[10vh]",
+            insideClassName,
+          )}
+        >
+          <CloseButton
+            onClick={onClose}
+            className={classNames("backdrop-blur max-md:fixed max-md:top-16 max-md:right-[calc(32px_+_5vw)]", closeButtonClassName)}
+          />
           {children}
         </div>
       </div>
@@ -374,7 +389,7 @@ function ProjectDrawer({
 function VisitWebsiteButton({ href }: { href: string }) {
   return (
     <a
-      className="backdrop-blur-lg bg-gradient-to-b from-white/30 to-white/15 hover:from-white/20 hover:to-white/10 rounded-full h-12 pl-6 pr-4 gap-2 inline-flex items-center transition-all"
+      className="backdrop-blur-lg bg-gradient-to-b from-white/30 to-white/15 hover:from-white/20 hover:to-white/10 rounded-full h-12 pl-6 pr-4 gap-2 inline-flex items-center transition-all max-md:w-full justify-center"
       href={href}
     >
       Visit Website
