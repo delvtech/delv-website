@@ -52,7 +52,7 @@ export function Home() {
 
           <div className="flex items-end gap-5 max-xl:flex-row-reverse max-md:flex-col-reverse">
             <ProjectCard
-              className="h-[336px] max-md:h-auto max-md:min-h-[280px]"
+              className="h-[336px] flex-1 max-md:h-auto max-md:min-h-[280px] max-md:max-w-full"
               logoSrc={councilLogo}
               logoAltText="Council"
               description="An adaptable governance system and a suite of tools that allow a community to create and manage a DAO."
@@ -60,11 +60,11 @@ export function Home() {
               onClick={() => openDrawer("council")}
             />
             <ProjectCard
-              className="h-[432px] max-md:h-auto"
+              className="h-[432px] flex-1 max-md:h-auto max-md:min-h-[280px] max-md:max-w-full"
               logoSrc={hyperdriveLogo}
               logoAltText="Hyperdrive"
-              logoClassName="-mb-[10px]"
-              description="Hyperdrive is a new AMM for fixed and variable yield positions underpinned by a novel pricing mechanism. It enables terms on-demand and removes the need for liquidity providers to roll over their capital allocations. Additionally, its mechanism design enables a more efficient, symmetrical yield market and is open source for others to build upon."
+              logoClassName="-mb-10"
+              description="Hyperdrive is an automated market maker for fixed and variable yields."
               arc={hyperdriveCornerArc}
               arcClassName="opacity-100"
               onClick={() => openDrawer("hyperdrive")}
@@ -278,14 +278,14 @@ function ProjectCard({
   return (
     <div
       className={classNames(
-        "clip-corners bg-gradient-to-br from-white via-[#14D7D9] via-20% to-[#1A1F31] flex p-[1px] max-w-[415px] max-md:max-w-full",
+        "clip-corners bg-gradient-to-br from-white via-[#14D7D9] via-20% to-[#1A1F31] flex p-[1px] max-w-[415px] max-md:w-full",
         "md:hover:via-[#13F3F3] md:hover:via-40% md:hover:to-[#0D9999] group",
         className,
       )}
     >
       <button
         onClick={onClick}
-        className="clip-corners bg-[#053E3E] px-10 pt-10 pb-8 flex flex-col justify-between bg-blend-soft-light bg-texture relative md:group-hover:bg-[#0A0B0B] transition-all duration-300"
+        className="clip-corners bg-[#053E3E] px-10 pt-10 pb-8 flex flex-col justify-between bg-blend-soft-light bg-texture relative md:group-hover:bg-[#0A0B0B] transition-all duration-300 max-md:w-full"
       >
         <img
           src={logoSrc}
