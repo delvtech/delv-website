@@ -216,7 +216,7 @@ export function Home() {
       <ProjectDrawer
         className="bg-[#191E31]"
         insideClassName="!min-h-[640px] max-md:min-h-full h-screen max-md:h-full"
-        closeButtonClassName="bg-[#191E31]/75 backdrop-blur-sm"
+        closeButtonClassName="!bg-[#191E31]/75 backdrop-blur-sm"
         isOpen={openedDrawer === "elfiverse"}
         onClose={closeDrawer}
       >
