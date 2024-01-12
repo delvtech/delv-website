@@ -55,14 +55,6 @@ export function About() {
       <div className="pt-36 overflow-y-hidden relative">
         <div className="max-w-5xl flex items-start justify-between mx-auto">
           <div className="flex flex-wrap items justify-between gap-16 font-blanka [&_p]:opacity-75">
-            {/* <div className="flex flex-col gap-4 justify-between max-w-72">
-
-              <p className="text-3xl leading-none !text-white">02</p>
-              <h2 className="text-[82px] font-incise tracking-tight leading-none">
-                Values
-              </h2>
-            </div> */}
-
             <div className="flex flex-col gap-4 justify-between max-w-72">
               <p className="text-3xl leading-none bg-gradient-to-br from-[#71F8F8] to-[#c5edff] bg-clip-text text-transparent !opacity-100">
                 02
