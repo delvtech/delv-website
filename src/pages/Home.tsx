@@ -75,7 +75,7 @@ export function Home() {
         {/* Right */}
         <div className="flex flex-col sm:max-xl:flex-row max-xl:justify-center gap-5">
           <ProjectCard
-            className="h-64 flex-1 max-sm:h-auto max-sm:min-h-[280px]"
+            className="h-64 flex-1 max-sm:h-auto max-sm:min-h-[280px] max-md:max-w-full"
             logoSrc={elementLogo}
             logoAltText="Element"
             description="Element is an an open-source protocol for fixed and variable yield markets."
@@ -83,7 +83,7 @@ export function Home() {
             onClick={() => openDrawer("element")}
           />
           <ProjectCard
-            className="h-[348px] flex-1 max-sm:h-auto max-sm:min-h-[280px]"
+            className="h-[348px] flex-1 max-sm:h-auto max-sm:min-h-[280px] max-md:max-w-full"
             logoSrc={elfiverseLogo}
             logoAltText="Elfiverse"
             description="An endeavor to intersect the DeFi and NFT worlds for community building, introducing new possibilities for governance."
