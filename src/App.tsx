@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           {/* TODO: Remove hardcoded URL */}
-          <Route path="/uk" element={<UKRedirect to="https://uk.delv.tech" />} />
+          {/* <Route path="/uk" element={<UKRedirect to="https://uk.delv.tech" />} /> */}
         </Routes>
       </div>
     </>
@@ -25,8 +25,7 @@ function App() {
 
 export default App;
 
-function UKRedirect({ to }: { to: string }) {
-  console.log("Redirecting to", to);
-  window.location.replace(to);
-  return <></>;
-}
+// function UKRedirect({ to }: { to: string }) {
+//   window.location.replace(to);
+//   return <></>;
+// }
