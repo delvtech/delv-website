@@ -77,7 +77,11 @@ export function Header() {
           },
         )}
       >
-        <img src={delvLogo} alt="DELV" className="absolute top-8 left-[5vw] h-8 mt-3 md:hidden" />
+        <img
+          src={delvLogo}
+          alt="DELV"
+          className="absolute top-8 left-[5vw] h-8 mt-3 md:hidden"
+        />
         <CloseButton onClick={closeMenu} />
         <div className="mb-20">
           <MenuLink to="/about" onClick={closeMenu}>
@@ -119,14 +123,24 @@ export function Header() {
               imgClassName="w-7 h-7"
             />
           </div>
-          <a
-            href="https://elementfi.s3.us-east-2.amazonaws.com/element-finance-terms-of-service.pdf"
-            className="opacity-75 hover:opacity-100 ml-auto"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Terms
-          </a>
+          <div className="flex gap-4 ml-auto text-lg font-medium">
+            <a
+              href="https://elementfi.s3.us-east-2.amazonaws.com/element-finance-terms-of-service.pdf"
+              className="opacity-75 hover:opacity-100"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Terms
+            </a>
+            <a
+              href="https://elementfi.s3.us-east-2.amazonaws.com/element-finance-privacy-policy.pdf"
+              className="opacity-75 hover:opacity-100"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Privacy
+            </a>
+          </div>
         </div>
       </div>
     </>

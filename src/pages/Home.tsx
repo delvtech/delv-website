@@ -10,9 +10,10 @@ import elfiverseCornerArc from "src/assets/elfiverse-corner-arc.svg";
 import elfiverseLogo from "src/assets/elfiverse-logo.svg";
 import hyperdriveCornerArc from "src/assets/hyperdrive-corner-arc.svg";
 import hyperdriveLogo from "src/assets/hyperdrive-logo.svg";
-import { CloseButton } from "src/components/CloseButton";
 import { FlairDown } from "src/components/FlairDown";
 import { FlairUp } from "src/components/FlairUp";
+import { ProjectCard } from "src/components/ProjectCard";
+import { ProjectDrawer } from "src/components/ProjectDrawer";
 import councilGraphic from "/council-graphic.png";
 import elfiverseGraphicBottomLeft from "/elfiverse-graphic-bottom-left.png";
 import elfiverseGraphicTopRight from "/elfiverse-graphic-top-right.png";
@@ -121,7 +122,7 @@ export function Home() {
         <img
           src={councilLogo}
           alt="Council"
-          className="mt-20 ml-[2vw] max-lg:ml-0 h-[60px] relative"
+          className="mt-20 max-md:mt-14 ml-[2vw] max-lg:ml-0 h-[60px] relative"
         />
 
         <div className="w-96 max-lg:w-full absolute right-[7vw] bottom-[10vh] max-lg:static mt-10">
@@ -190,7 +191,7 @@ export function Home() {
         <img
           src={elementLogo}
           alt="Element"
-          className="mt-16 h-[92px] relative"
+          className="mt-16 max-md:mt-14 h-[92px] relative"
         />
 
         <div className="w-96 max-lg:w-full absolute right-[10vw] bottom-[15vh] max-lg:static mt-10">
@@ -256,140 +257,6 @@ export function Home() {
 
 const drawerNames = ["council", "hyperdrive", "element", "elfiverse"] as const;
 type DrawerName = (typeof drawerNames)[number];
-
-function ProjectCard({
-  logoSrc,
-  logoAltText,
-  logoClassName,
-  description,
-  onClick,
-  className,
-  arc,
-  arcClassName,
-}: {
-  logoSrc: string;
-  logoAltText?: string;
-  logoClassName?: string;
-  description: string;
-  onClick: () => void;
-  className?: string;
-  arc?: string;
-  arcClassName?: string;
-}) {
-  return (
-    <div
-      className={classNames(
-        "clip-corners bg-gradient-to-br from-white via-[#14D7D9] via-20% to-[#1A1F31] flex p-[1px] max-w-[415px] max-md:w-full",
-        "md:hover:via-[#13F3F3] md:hover:via-40% md:hover:to-[#0D9999] group",
-        className,
-      )}
-    >
-      <button
-        onClick={onClick}
-        className="clip-corners bg-[#053E3E] px-10 pt-10 pb-8 flex flex-col justify-between bg-blend-soft-light bg-texture relative md:group-hover:bg-[#0A0B0B] transition-all duration-300 max-md:w-full"
-      >
-        <img
-          src={logoSrc}
-          alt={logoAltText}
-          className={classNames(
-            "md:group-hover:scale-75 origin-top-left transition-all duration-300",
-            logoClassName,
-          )}
-        />
-        <p className="my-auto pb-14 text-left opacity-0 md:group-hover:opacity-100 transition-all duration-300">
-          {description}
-        </p>
-
-        {/* arrow */}
-        <svg
-          className="absolute right-10 bottom-8 mix-blend-soft-light opacity-60 max-md:opacity-100 md:group-hover:mix-blend-normal md:group-hover:opacity-100 transition-all duration-300 w-10 h-10 md:group-hover:scale-150 origin-bottom-right stroke-white md:group-hover:stroke-[.5px]"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 12H20M20 12L13.5 5.5M20 12L13.5 18.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-
-        {/* flare glows */}
-        <FlairDown className="absolute top-0 left-[40%] -translate-x-1/2 z-[-1] opacity-0 md:group-hover:opacity-50 transition-all duration-300" />
-        <FlairUp className="absolute bottom-0 left-[40%] -translate-x-1/2 z-[-1] opacity-0 md:group-hover:opacity-50 transition-all duration-300" />
-
-        {/* bottom-right arc graphic */}
-        {arc && (
-          <img
-            src={arc}
-            className={classNames(
-              "absolute bottom-0 right-0 mix-blend-soft-light opacity-60 md:group-hover:!opacity-0 transition-all duration-300",
-              arcClassName,
-            )}
-          />
-        )}
-      </button>
-    </div>
-  );
-}
-
-function ProjectDrawer({
-  isOpen,
-  className,
-  insideClassName,
-  onClose,
-  children,
-  closeButtonClassName,
-}: {
-  children: React.ReactNode;
-  isOpen: boolean;
-  onClose: () => void;
-  className?: string;
-  insideClassName?: string;
-  closeButtonClassName?: string;
-}) {
-  return (
-    <div
-      className={classNames(
-        "md:clip-drawer fixed h-screen top-0 left-full w-2/3 transition-all duration-300 z-50 overflow-auto",
-        "max-md:rounded-2xl max-md:top-16 max-md:right-8 max-md:bottom-0 max-md:!left-8 max-md:w-auto max-md:h-auto max-md:opacity-0 max-md:pointer-events-none max-md:bg-gradient-to-br max-md:from-white/70 max-md:via-50% max-md:via-white/70 max-md:to-white/15 max-md:p-px",
-        {
-          "!left-1/3": isOpen,
-          "max-md:top-8 max-md:!bottom-8 max-md:opacity-100 max-md:pointer-events-auto after:-mt-10":
-            isOpen,
-        },
-      )}
-    >
-      {/*
-        A container that sits one px inside the drawer to create a gradient
-        border effect using the drawer's background color.
-      */}
-      <div
-        className={classNames(
-          "overflow-auto absolute inset-0 max-md:inset-px max-md:rounded-2xl",
-          className,
-        )}
-      >
-        {/* scroll container */}
-        <div
-          className={classNames(
-            "min-h-screen relative overflow-hidden px-24 py-16",
-            "max-md:min-h-full max-md:px-[10vw] max-md:py-[10vh]",
-            insideClassName,
-          )}
-        >
-          <CloseButton
-            onClick={onClose}
-            className={classNames(
-              "backdrop-blur max-md:fixed max-md:top-16 max-md:right-[calc(32px_+_5vw)]",
-              closeButtonClassName,
-            )}
-          />
-          {children}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function VisitWebsiteButton({ href }: { href: string }) {
   return (
