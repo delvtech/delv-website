@@ -64,7 +64,7 @@ export function Home() {
               logoSrc={hyperdriveLogo}
               logoAltText="Hyperdrive"
               logoClassName="-mb-10"
-              description="Hyperdrive is an automated market maker for fixed and variable yields."
+              description="Hyperdrive is a new Automated Market Maker (AMM) for fixed and variable yields featuring terms on demand and single-sided liquidity provisioning that no longer requires capital to be rolled over &mdash; it's everlasting."
               arc={hyperdriveCornerArc}
               arcClassName="opacity-100"
               onClick={() => openDrawer("hyperdrive")}
@@ -163,11 +163,12 @@ export function Home() {
 
         <div className="w-[440px] max-lg:w-full absolute right-[10vw] bottom-[10vw] max-lg:static mt-6">
           <p className="opacity-80 text-lg font-blanka leading-snug mb-8 [text-shadow:0_0_5px_black,1px_1px_black]">
-            Hyperdrive is a protocol for trading interest-bearing assets at a
-            discount, which can be redeemed for their face value at maturity. Go
-            long to lock in a predictable rate of return, go short to maximize
-            exposure to the variable rate, or market-make to profit from
-            directional market shifts. Yield exposure at your control.
+            Hyperdrive is a new AMM for fixed and variable yield positions
+            underpinned by a novel pricing mechanism. It enables terms on-demand
+            and removes the need for liquidity providers to roll over their
+            capital allocations. Additionally, its mechanism design enables a
+            more efficient, symmetrical yield market and is open source for
+            others to build on.
           </p>
         </div>
       </ProjectDrawer>

@@ -93,9 +93,9 @@ export function About() {
                 (Appropriate) Openness
               </h3>
               <p>
-                We believe power of transparency and feedback, from how we work
-                across our teams to contributing open source software for the
-                benefit of all, while also recognizing time is a scarce
+                We believe power in the of transparency and feedback, from how
+                we work across our teams to contributing open source software
+                for the benefit of all, while also recognizing time is a scarce
                 resource.
               </p>
             </div>
@@ -144,9 +144,9 @@ export function About() {
               </h3>
               <p>
                 Extraordinary claims require extraordinary proof. We are
-                committed to research, develop, and ship our work with clear and
-                convincing results. We ruthlessly prioritize towards producing
-                these results.
+                committed to research, development, and shipping our work with
+                clear and convincing results. We ruthlessly prioritize towards
+                producing these results.
               </p>
             </div>
             <div className="basis-[440px] max-lg:basis-auto">
