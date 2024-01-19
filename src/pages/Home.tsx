@@ -69,7 +69,7 @@ export function Home() {
               description={
                 region === "uk"
                   ? "Hyperdrive is an automated market maker for fixed and variable yields."
-                  : "Hyperdrive is a new Automated Market Maker (AMM) for fixed and variable yields featuring terms on demand and single-sided liquidity provisioning that no longer requires capital to be rolled over &mdash; it's everlasting."
+                  : "Hyperdrive is a new Automated Market Maker (AMM) for fixed and variable yields featuring terms on demand and single-sided liquidity provisioning that no longer requires capital to be rolled over — it's everlasting."
               }
               arc={hyperdriveCornerArc}
               arcClassName="opacity-100"
