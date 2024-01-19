@@ -93,7 +93,7 @@ export function About() {
                 (Appropriate) Openness
               </h3>
               <p>
-                We believe power in the of transparency and feedback, from how
+                We believe in the power of transparency and feedback, from how
                 we work across our teams to contributing open source software
                 for the benefit of all, while also recognizing time is a scarce
                 resource.
