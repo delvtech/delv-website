@@ -44,8 +44,8 @@ export function About() {
           </div>
           <p className="max-w-[440px] max-md:max-w-full max-md:mt-10 max-md:text-lg font-blanka">
             Our Mission is to advance the safe adoption of decentralized
-            financial systems by building a suite of novel, research-backed, and
-            open source infrastructure.
+            financial systems by building novel, research-backed, and open
+            source infrastructure.
           </p>
         </div>
       </div>
@@ -83,7 +83,7 @@ export function About() {
               </h3>
               <p>
                 We believe in unpacking the fundamental concepts and assumptions
-                on which theories, systems, or methods are based, we don’t chase
+                on which theories, systems, or methods are based, we don't chase
                 trends.
               </p>
             </div>
@@ -159,7 +159,7 @@ export function About() {
             </div>
             <div className="basis-[440px] max-lg:basis-auto">
               <h3 className="mb-2 font-incise text-4xl">
-                Make It safe and approachable
+                Make It Safe and Approachable
               </h3>
               <p>
                 Safety is a precondition to usability and adoption. We go the
