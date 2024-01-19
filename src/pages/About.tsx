@@ -180,7 +180,7 @@ export function About() {
             </div>
             <div className="basis-[440px] max-lg:basis-auto">
               <h3 className="mb-2 font-incise text-4xl">
-                Foster Clear Communication and active Collaboration
+                Foster Clear Communication and Active Collaboration
               </h3>
               <p>
                 We engage each other with context, clear expectations, and tools
