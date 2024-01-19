@@ -57,7 +57,7 @@ export function Home() {
               className="h-[336px] flex-1 max-md:h-auto max-md:min-h-[280px] max-md:max-w-full"
               logoSrc={councilLogo}
               logoAltText="Council"
-              description="An adaptable governance system and a suite of tools that allow a community to create and manage a DAO."
+              description="Council is an adaptable governance system and a suite of tools that allow a community to create and manage a DAO."
               arc={councilCornerArc}
               onClick={() => openDrawer("council")}
             />
@@ -84,7 +84,7 @@ export function Home() {
             className="h-64 flex-1 max-sm:h-auto max-sm:min-h-[280px] max-md:max-w-full"
             logoSrc={elementLogo}
             logoAltText="Element"
-            description="Element is an an open-source protocol for fixed and variable yield markets."
+            description="Element is an open-source protocol for fixed and variable yield markets."
             arc={elementCornerArc}
             onClick={() => openDrawer("element")}
           />
@@ -92,7 +92,7 @@ export function Home() {
             className="h-[348px] flex-1 max-sm:h-auto max-sm:min-h-[280px] max-md:max-w-full"
             logoSrc={elfiverseLogo}
             logoAltText="Elfiverse"
-            description="An endeavor to intersect the DeFi and NFT worlds for community building, introducing new possibilities for governance."
+            description="Elfiverse is an endeavor to intersect the DeFi and NFT worlds for community building, introducing new possibilities for governance."
             arc={elfiverseCornerArc}
             onClick={() => openDrawer("elfiverse")}
           />
