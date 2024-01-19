@@ -14,6 +14,7 @@ import { FlairDown } from "src/components/FlairDown";
 import { FlairUp } from "src/components/FlairUp";
 import { ProjectCard } from "src/components/ProjectCard";
 import { ProjectDrawer } from "src/components/ProjectDrawer";
+import { region } from "src/region";
 import councilGraphic from "/council-graphic.png";
 import elfiverseGraphicBottomLeft from "/elfiverse-graphic-bottom-left.png";
 import elfiverseGraphicTopRight from "/elfiverse-graphic-top-right.png";
@@ -65,7 +66,11 @@ export function Home() {
               logoSrc={hyperdriveLogo}
               logoAltText="Hyperdrive"
               logoClassName="-mb-10"
-              description="Hyperdrive is a new Automated Market Maker (AMM) for fixed and variable yields featuring terms on demand and single-sided liquidity provisioning that no longer requires capital to be rolled over &mdash; it's everlasting."
+              description={
+                region === "uk"
+                  ? "Hyperdrive is an automated market maker for fixed and variable yields."
+                  : "Hyperdrive is a new Automated Market Maker (AMM) for fixed and variable yields featuring terms on demand and single-sided liquidity provisioning that no longer requires capital to be rolled over &mdash; it's everlasting."
+              }
               arc={hyperdriveCornerArc}
               arcClassName="opacity-100"
               onClick={() => openDrawer("hyperdrive")}
@@ -162,15 +167,29 @@ export function Home() {
           className="mt-20 ml-[2vw] max-lg:ml-0 h-[180px] relative"
         />
 
-        <div className="w-[440px] max-lg:w-full absolute right-[10vw] bottom-[10vw] max-lg:static mt-6">
-          <p className="opacity-80 text-lg font-blanka leading-snug mb-8 [text-shadow:0_0_5px_black,1px_1px_black]">
-            Hyperdrive is a new AMM for fixed and variable yield positions
-            underpinned by a novel pricing mechanism. It enables terms on-demand
-            and removes the need for liquidity providers to roll over their
-            capital allocations. Additionally, its mechanism design enables a
-            more efficient, symmetrical yield market and is open source for
-            others to build on.
-          </p>
+        <div
+          className={classNames(
+            " max-lg:w-full absolute right-[10vw] max-lg:static mt-6 opacity-80 text-lg font-blanka leading-snug mb-8 [text-shadow:0_0_5px_black,1px_1px_black]",
+            region === "uk" ? "w-96 top-1/2" : "w-[440px] bottom-[10vw]",
+          )}
+        >
+          {region === "uk" ? (
+            <p className="mb-8">
+              Hyperdrive is an automated market maker for fixed and variable
+              yields.
+            </p>
+          ) : (
+            <p className="mb-8">
+              Hyperdrive is a new AMM for fixed and variable yield positions
+              underpinned by a novel pricing mechanism. It enables terms
+              on-demand and removes the need for liquidity providers to roll
+              over their capital allocations. Additionally, its mechanism design
+              enables a more efficient, symmetrical yield market and is open
+              source for others to build on.
+            </p>
+          )}
+
+          <VisitWebsiteButton />
         </div>
       </ProjectDrawer>
 
@@ -210,7 +229,9 @@ export function Home() {
             </p>
           </div>
 
-          <VisitWebsiteButton href="https://docs.element.fi/" />
+          {region !== "uk" && (
+            <VisitWebsiteButton href="https://docs.element.fi/" />
+          )}
         </div>
       </ProjectDrawer>
 
@@ -258,14 +279,24 @@ export function Home() {
 const drawerNames = ["council", "hyperdrive", "element", "elfiverse"] as const;
 type DrawerName = (typeof drawerNames)[number];
 
-function VisitWebsiteButton({ href }: { href: string }) {
-  return (
+function VisitWebsiteButton({
+  href,
+  children = href ? "Visit Website" : "Coming Soon",
+}: {
+  href?: string;
+  children?: React.ReactNode;
+}) {
+  return href ? (
     <a
       className="backdrop-blur-lg bg-gradient-to-b from-white/30 to-white/15 hover:from-white/20 hover:to-white/10 rounded-full h-12 pl-6 pr-4 gap-2 inline-flex items-center transition-all max-md:w-full justify-center max-md:h-[60px] max-md:text-xl [text-shadow:0_0_5px_rgba(0,0,0,.5)]"
       href={href}
     >
-      Visit Website
+      {children}
       <img src={arrowRight} />
     </a>
+  ) : (
+    <div className="backdrop-blur-lg bg-gradient-to-b from-white/30 to-white/15 rounded-full h-12 px-6 inline-flex items-center max-md:w-full justify-center max-md:h-[60px] max-md:text-xl [text-shadow:0_0_5px_rgba(0,0,0,.5)] opacity-80">
+      {children}
+    </div>
   );
 }

@@ -20,9 +20,8 @@ export function About() {
             About
           </h1>
           <p className="font-blanka text-2xl leading-8">
-            We research, build, and open source novel protocols and
-            infrastructure to propel the global adoption of decentralized
-            finance.
+            We believe in a world where global economic systems will operate on
+            highly accessible decentralized infrastructure.
           </p>
         </div>
       </div>
