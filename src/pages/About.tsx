@@ -73,7 +73,7 @@ export function About() {
               <h3 className="mb-2 font-incise text-4xl">Building For People</h3>
               <p>
                 We believe in the creation, promotion, and advancement of
-                decentralized system for benefit of present and future
+                decentralized systems for benefit of present and future
                 generations.
               </p>
             </div>
@@ -143,7 +143,7 @@ export function About() {
               </h3>
               <p>
                 Extraordinary claims require extraordinary proof. We are
-                committed to research, development, and shipping our work with
+                committed to research, develop, and ship our work with
                 clear and convincing results. We ruthlessly prioritize towards
                 producing these results.
               </p>
