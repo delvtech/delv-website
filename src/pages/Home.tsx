@@ -65,7 +65,7 @@ export function Home() {
               className="h-[432px] flex-1 max-md:h-auto max-md:min-h-[280px] max-md:max-w-full"
               logoSrc={hyperdriveLogo}
               logoAltText="Hyperdrive"
-              logoClassName="-mb-10"
+              logoClassName="-mb-10 max-w-[280px]"
               description={
                 region === "uk"
                   ? "Hyperdrive is an automated market maker for fixed and variable yields."
@@ -164,7 +164,7 @@ export function Home() {
         <img
           src={hyperdriveLogo}
           alt="Hyperdrive"
-          className="mt-20 ml-[2vw] max-lg:ml-0 h-[180px] relative"
+          className="mt-24 ml-[3vw] max-xl:ml-0 h-[90px] relative"
         />
 
         <div
