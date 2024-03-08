@@ -17,6 +17,8 @@ function App() {
           <Route path="/about" element={<About />} />
           {/* TODO: Remove hardcoded URL */}
           <Route path="/uk" element={<Redirect to="https://uk.delv.tech" />} />
+          {/* Discord redirect */}
+          <Route path="/discord" element={<Redirect to="https://discord.gg/EEfKmfQdtx" />} />
         </Routes>
       </div>
     </>
