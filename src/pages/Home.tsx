@@ -189,7 +189,7 @@ export function Home() {
             </p>
           )}
 
-          <VisitWebsiteButton />
+          <VisitWebsiteButton href="https://hyperdrive.delv.tech/" />
         </div>
       </ProjectDrawer>
 
