@@ -230,7 +230,7 @@ export function Home() {
           </div>
 
           {region !== "uk" && (
-            <VisitWebsiteButton href="https://docs.element.fi/" />
+            <VisitWebsiteButton href="https://docs-delv.gitbook.io/element-protocol-docs/" />
           )}
         </div>
       </ProjectDrawer>
