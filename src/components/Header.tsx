@@ -125,7 +125,7 @@ export function Header() {
           </div>
           <div className="flex gap-4 ml-auto text-lg font-medium">
             <a
-              href="https://elementfi.s3.us-east-2.amazonaws.com/element-finance-terms-of-service.pdf"
+              href="https://delv-public.s3.us-east-2.amazonaws.com/delv-terms-of-service.pdf"
               className="opacity-75 hover:opacity-100"
               target="_blank"
               rel="noreferrer"
@@ -133,7 +133,7 @@ export function Header() {
               Terms
             </a>
             <a
-              href="https://elementfi.s3.us-east-2.amazonaws.com/element-finance-privacy-policy.pdf"
+              href="https://delv-public.s3.us-east-2.amazonaws.com/delv-privacy-policy.pdf"
               className="opacity-75 hover:opacity-100"
               target="_blank"
               rel="noreferrer"

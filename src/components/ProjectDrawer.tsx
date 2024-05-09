@@ -57,7 +57,7 @@ export function ProjectDrawer({
 
           <div className="flex gap-4 max-md:gap-10 ml-auto font-medium absolute bottom-4 max-md:bottom-0 right-8 max-md:right-0 max-md:w-full [text-shadow:0_0_5px_rgba(0,0,0,.5),1px_1px_rgba(0,0,0,.5)] max-md:bg-black/40 h-9 max-md:h-12 justify-center items-center px-4 backdrop-blur rounded-b-2xl">
             <a
-              href="https://elementfi.s3.us-east-2.amazonaws.com/element-finance-terms-of-service.pdf"
+              href="https://delv-public.s3.us-east-2.amazonaws.com/delv-terms-of-service.pdf"
               className="opacity-75 hover:opacity-100"
               target="_blank"
               rel="noreferrer"
@@ -65,7 +65,7 @@ export function ProjectDrawer({
               Terms
             </a>
             <a
-              href="https://elementfi.s3.us-east-2.amazonaws.com/element-finance-privacy-policy.pdf"
+              href="https://delv-public.s3.us-east-2.amazonaws.com/delv-privacy-policy.pdf"
               className="opacity-75 hover:opacity-100"
               target="_blank"
               rel="noreferrer"
