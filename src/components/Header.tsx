@@ -9,6 +9,8 @@ import xLogo from "src/assets/x-logo.svg";
 import { CloseButton } from "src/components/CloseButton";
 import { useIsScrolled } from "src/hooks/useIsScrolled";
 
+const SHOW_ANNOUNCEMENT_BANNER = true;
+
 export function Header() {
   const isScrolled = useIsScrolled();
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -31,12 +33,32 @@ export function Header() {
 
   return (
     <>
+      {/* Announcement banner */}
+      {SHOW_ANNOUNCEMENT_BANNER && (
+        <div className="h-10 bg-black border-b border-white/10 flex items-center justify-center text-sm">
+          <p>
+            We've updated our Privacy Policy. See the latest version{" "}
+            <a
+              href="https://delv-public.s3.us-east-2.amazonaws.com/delv-privacy-policy.pdf"
+              className="text-[#71F8F8]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              here
+            </a>
+            .
+          </p>
+        </div>
+      )}
+
+      {/* Delv logo */}
       <Link
         to="/"
         className={classNames(
           "fixed top-7 left-16 max-lg:left-[5vw] z-10 h-[60px] px-6 -ml-3 bg-black/40 backdrop-blur flex items-center rounded-full overflow-hidden transition-all duration-300",
           {
             "!top-2": isScrolled,
+            "mt-8": SHOW_ANNOUNCEMENT_BANNER && !isScrolled,
           },
         )}
       >
@@ -50,6 +72,7 @@ export function Header() {
           "fixed top-7 right-16 max-lg:right-[5vw] w-[60px] h-[60px] rounded-full border border-white/30 p-0 box-border flex items-center justify-center hover:border-white/60 bg-black/40 backdrop-blur z-50 transition-[all,top] duration-[200ms,300ms]",
           {
             "!top-3": isScrolled,
+            "mt-8": SHOW_ANNOUNCEMENT_BANNER && !isScrolled,
           },
         )}
         onClick={openMenu}
@@ -63,6 +86,7 @@ export function Header() {
           "fixed inset-0 bg-transparent pointer-events-none transition-all duration-300 z-10",
           {
             "pointer-events-auto": menuOpen,
+            "mt-8": SHOW_ANNOUNCEMENT_BANNER && !isScrolled,
           },
         )}
         onClick={closeMenu}
@@ -74,6 +98,7 @@ export function Header() {
           "fixed w-[360px] max-md:w-full top-0 right-[-360px] max-md:-right-full bottom-0 bg-black flex flex-col transition-all duration-300 pt-32 z-50 overflow-auto",
           {
             "!right-0": menuOpen,
+            "mt-8": SHOW_ANNOUNCEMENT_BANNER && !isScrolled,
           },
         )}
       >
