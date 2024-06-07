@@ -9,7 +9,7 @@ import xLogo from "src/assets/x-logo.svg";
 import { CloseButton } from "src/components/CloseButton";
 import { useIsScrolled } from "src/hooks/useIsScrolled";
 
-const SHOW_ANNOUNCEMENT_BANNER = true;
+const SHOW_ANNOUNCEMENT_BANNER = false;
 
 export function Header() {
   const isScrolled = useIsScrolled();
