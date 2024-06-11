@@ -189,8 +189,8 @@ export function Team() {
             href="https://www.standardcrypto.vc/"
           />
           <InvestorLogo
-            href="#"
-            src="/investor-logos/a_capital.png"
+            href="https://acapital.com/"
+            src="/investor-logos/a_capital.svg"
             alt="a_capital"
           />
           <InvestorLogo
