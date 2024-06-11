@@ -17,7 +17,7 @@ export function Team() {
         {/* bottom shadow */}
         <div className="absolute bottom-0 h-[440px] w-full bg-gradient-to-b from-transparent to-black"></div>
 
-        <div className="relative mt-72 w-[630px] text-center max-md:mt-64">
+        <div className="relative mt-72 w-[720px] text-center max-md:mt-64">
           <h1 className="mb-9 font-incise text-[82px] leading-none tracking-tight">
             Our Team
           </h1>
