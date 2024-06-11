@@ -60,7 +60,7 @@ export function Team() {
             title="Product Engineer"
             portraitSrc="/portraits/jack.png"
             href="https://www.linkedin.com/in/jamesburrus"
-            xUrl="https://x.com/jackburru"
+            xUrl="https://x.com/jackburrus"
           />
           <PersonCard
             name="Shant Marootian"
