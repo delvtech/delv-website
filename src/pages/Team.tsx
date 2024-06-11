@@ -173,11 +173,26 @@ export function Team() {
       </div>
 
       {/* investors */}
-      <div className="relative mx-auto max-w-[1440px] pb-32 max-2xl:px-[5vw] max-md:text-lg">
+      <div className="relative mx-auto max-w-7xl pb-32 max-2xl:px-[5vw] max-md:text-lg">
         <h2 className="text-center font-incise text-[82px] leading-none tracking-tight">
           Our Investors
         </h2>
         <div className="mx-auto mt-20 flex flex-wrap items-center justify-center gap-x-28 gap-y-24 max-2xl:gap-x-24 max-xl:gap-x-16">
+          <InvestorLogo
+            href="https://www.placeholder.vc/"
+            src="/investor-logos/placeholder.png"
+            alt="placeholder"
+          />
+          <InvestorLogo
+            href="https://a16zcrypto.com/"
+            src="/investor-logos/a16z.svg"
+            alt="a16z"
+          />
+          <InvestorLogo
+            href="https://polychain.capital/"
+            src="/investor-logos/polychain-capital.png"
+            alt="Polychain Capital"
+          />
           <InvestorLogo
             src="/investor-logos/hack-vc.svg"
             alt="Hack VC"
@@ -189,24 +204,14 @@ export function Team() {
             href="https://www.standardcrypto.vc/"
           />
           <InvestorLogo
+            href="https://www.etherealventures.com/"
+            src="/investor-logos/ethereal-ventures.svg"
+            alt="Ethereal Ventures"
+          />
+          <InvestorLogo
             href="https://acapital.com/"
             src="/investor-logos/a_capital.svg"
             alt="a_capital"
-          />
-          <InvestorLogo
-            href="https://a16zcrypto.com/"
-            src="/investor-logos/a16z.svg"
-            alt="a16z"
-          />
-          <InvestorLogo
-            href="https://www.placeholder.vc/"
-            src="/investor-logos/placeholder.png"
-            alt="placeholder"
-          />
-          <InvestorLogo
-            href="https://robvc.com/"
-            src="/investor-logos/robot-ventures.png"
-            alt="Robot Ventures"
           />
           <InvestorLogo
             href="https://svangel.com/"
@@ -214,14 +219,9 @@ export function Team() {
             alt="SVA"
           />
           <InvestorLogo
-            href="https://polychain.capital/"
-            src="/investor-logos/polychain-capital.png"
-            alt="Polychain Capital"
-          />
-          <InvestorLogo
-            href="https://www.etherealventures.com/"
-            src="/investor-logos/ethereal-ventures.svg"
-            alt="Ethereal Ventures"
+            href="https://robvc.com/"
+            src="/investor-logos/robot-ventures.png"
+            alt="Robot Ventures"
           />
         </div>
       </div>
