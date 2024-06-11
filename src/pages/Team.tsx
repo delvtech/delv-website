@@ -22,11 +22,13 @@ export function Team() {
             Our Team
           </h1>
           <p className="font-blanka text-2xl leading-8">
-            DELV's products stem from our team's deep curiosity and strengths in
-            development research. We're a group of passionate change makers on
-            the cutting edge of DeFi, helping to shape the future of the
-            trustless ownership and programmatic markets for crypto-native
-            assets.
+            We are a diverse group of experts from various backgrounds united by
+            a shared passion for decentralized finance (DeFi). Our collective
+            expertise and dedication drive us to innovate and create solutions
+            that empower individuals and transform the financial landscape.
+            Together, we are committed to making DeFi accessible, secure, and
+            impactful for everyone. Meet the minds behind our mission and join
+            us in shaping the future of finance.
           </p>
         </div>
       </div>
