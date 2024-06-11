@@ -19,7 +19,7 @@ export function About() {
           <h1 className="font-incise text-[82px] tracking-tight leading-none mb-9">
             About
           </h1>
-          <p className="font-blanka text-2xl leading-8">
+          <p className="text-2xl leading-8">
             We believe in a world where global economic systems will operate on
             highly accessible decentralized infrastructure.
           </p>
@@ -42,7 +42,7 @@ export function About() {
               Mission
             </h2>
           </div>
-          <p className="max-w-[440px] max-md:max-w-full max-md:mt-10 max-md:text-lg font-blanka">
+          <p className="max-w-[440px] max-md:max-w-full max-md:mt-10 max-md:text-lg">
             Our Mission is to advance the safe adoption of decentralized
             financial systems by building novel, research-backed, and open
             source infrastructure.
@@ -53,7 +53,7 @@ export function About() {
       {/* values */}
       <div className="pt-36 max-md:pt-28 overflow-y-hidden relative max-md:text-lg">
         <div className="max-w-5xl px-[5vw] box-content flex items-start justify-between mx-auto">
-          <div className="flex flex-wrap mx-lg:flex-col items justify-between gap-16 max-xl:gap-12 font-blanka [&_p]:opacity-75">
+          <div className="flex flex-wrap mx-lg:flex-col items justify-between gap-16 max-xl:gap-12 [&_p]:opacity-75">
             <div className="flex flex-col gap-4 justify-between max-w-72">
               <p className="text-3xl leading-none bg-gradient-to-br from-[#71F8F8] to-[#c5edff] bg-clip-text text-transparent !opacity-100">
                 02
@@ -122,7 +122,7 @@ export function About() {
       {/* guiding principles */}
       <div className="pb-32 overflow-y-hidden relative max-md:text-lg">
         <div className="max-w-5xl px-[5vw] box-content flex items-start justify-between mx-auto">
-          <div className="flex flex-wrap mx-lg:flex-col items justify-between gap-16 max-xl:gap-12 font-blanka [&_p]:opacity-75">
+          <div className="flex flex-wrap mx-lg:flex-col items justify-between gap-16 max-xl:gap-12 [&_p]:opacity-75">
             <div className="flex flex-col gap-4 justify-between max-w-72">
               <p className="text-3xl leading-none bg-gradient-to-br from-[#71F8F8] to-[#c5edff] bg-clip-text text-transparent !opacity-100">
                 03
