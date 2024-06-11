@@ -78,7 +78,7 @@ export function Team() {
           />
           <PersonCard
             name="Andrea DiSandro"
-            title="Product Engineer"
+            title="Legal"
             portraitSrc="/portraits/andrea.png"
             href="https://www.linkedin.com/in/andrea-disandro-b726386a"
             xUrl="https://x.com/AndreaDisandro"
