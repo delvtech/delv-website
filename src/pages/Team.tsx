@@ -37,126 +37,126 @@ export function Team() {
           <PersonCard
             name="Charles St. Louis"
             title="CEO"
-            portraitSrc="/public/portraits/charles.png"
+            portraitSrc="/portraits/charles.png"
             href="https://www.linkedin.com/in/charlesstlouis"
             xUrl="https://x.com/CharlieStLouis"
           />
           <PersonCard
             name="Mihai Cosma"
             title="DeFi Strategist"
-            portraitSrc="/public/portraits/mihai.png"
+            portraitSrc="/portraits/mihai.png"
             href="https://mihaicosma.com"
             xUrl="https://x.com/mihai673"
           />
           <PersonCard
             name="Adelina Ruffolo"
             title="Operations"
-            portraitSrc="/public/portraits/adelina.png"
+            portraitSrc="/portraits/adelina.png"
             href="https://www.linkedin.com/in/adelinaruffolo"
             xUrl="https://x.com/adelina_ruffolo"
           />
           <PersonCard
             name="Jack Burrus"
             title="Product Engineer"
-            portraitSrc="/public/portraits/jack.png"
+            portraitSrc="/portraits/jack.png"
             href="https://www.linkedin.com/in/jamesburrus"
             xUrl="https://x.com/jackburru"
           />
           <PersonCard
             name="Shant Marootian"
             title="Operations"
-            portraitSrc="/public/portraits/shant.png"
+            portraitSrc="/portraits/shant.png"
             href="https://warpcast.com/shant"
             xUrl="https://x.com/smaroo"
           />
           <PersonCard
             name="Danny Delott"
             title="Product Engineer"
-            portraitSrc="/public/portraits/danny.png"
+            portraitSrc="/portraits/danny.png"
             href="http://github.com/dannydelott"
             xUrl="https://x.com/DannyDelott"
           />
           <PersonCard
             name="Andrea DiSandro"
             title="Product Engineer"
-            portraitSrc="/public/portraits/andrea.png"
+            portraitSrc="/portraits/andrea.png"
             href="https://www.linkedin.com/in/andrea-disandro-b726386a"
             xUrl="https://x.com/AndreaDisandro"
           />
           <PersonCard
             name="Cash DeLeon"
             title="Integrations Engineer"
-            portraitSrc="/public/portraits/cash.png"
+            portraitSrc="/portraits/cash.png"
             href="https://x.com/0xashd"
             xUrl="https://x.com/0xashd"
           />
           <PersonCard
             name="Alex Towle"
             title="Core Engineer"
-            portraitSrc="/public/portraits/alex.png"
+            portraitSrc="/portraits/alex.png"
             href="https://github.com/jalextowle"
             xUrl="https://x.com/jalex_towle"
           />
           <PersonCard
             name="Gregory Lisa"
             title="CLO"
-            portraitSrc="/public/portraits/greg.png"
+            portraitSrc="/portraits/greg.png"
             href="https://www.linkedin.com/in/gregory-lisa-9391785a"
             xUrl="https://x.com/gregoryclisa"
           />
           <PersonCard
             name="Matt Brown"
             title="Integrations Engineer"
-            portraitSrc="/public/portraits/matt.png"
+            portraitSrc="/portraits/matt.png"
             href="https://www.linkedin.com/in/mattfdbrown"
             xUrl="https://x.com/sentilesdal"
           />
           <PersonCard
             name="Alim Khamisa"
             title="Product"
-            portraitSrc="/public/portraits/alim.png"
+            portraitSrc="/portraits/alim.png"
             href="https://ca.linkedin.com/in/alimkhamisa"
             xUrl="https://x.com/AlimKhamisa"
           />
           <PersonCard
             name="Giovanni Effio"
             title="Product"
-            portraitSrc="/public/portraits/mazy.png"
+            portraitSrc="/portraits/mazy.png"
             href="https://x.com/MazyGio"
             xUrl="https://x.com/MazyGio"
           />
           <PersonCard
             name="Dylan Paiton"
             title="Core Engineer"
-            portraitSrc="/public/portraits/dylan.png"
+            portraitSrc="/portraits/dylan.png"
             href="https://github.com/dpaiton"
             xUrl="https://x.com/PaitonDylan"
           />
           <PersonCard
             name="Jonny Rhea"
             title="Co-Founder & CTO"
-            portraitSrc="/public/portraits/jonny.png"
+            portraitSrc="/portraits/jonny.png"
             href="https://x.com/JonnyRhea"
             xUrl="https://x.com/JonnyRhea"
           />
           <PersonCard
             name="John McClure"
             title="Core Engineer"
-            portraitSrc="/public/portraits/john.png"
+            portraitSrc="/portraits/john.png"
             href="https://github.com/mcclurejt"
             xUrl="https://x.com/0xpickleback"
           />
           <PersonCard
             name="Sheng Lundquist"
             title="Core Engineer"
-            portraitSrc="/public/portraits/sheng.png"
+            portraitSrc="/portraits/sheng.png"
             href="https://www.linkedin.com/in/shenglundquist"
             xUrl="https://x.com/lundquistsheng"
           />
           <PersonCard
             name="Ryan Goree"
             title="Product Engineer"
-            portraitSrc="/public/portraits/ryan.png"
+            portraitSrc="/portraits/ryan.png"
             href="https://github.com/ryangoree"
             xUrl="https://x.com/ryegoree"
           />
@@ -179,48 +179,48 @@ export function Team() {
         </h2>
         <div className="mx-auto mt-20 flex flex-wrap items-center justify-center gap-x-28 gap-y-24 max-2xl:gap-x-24 max-xl:gap-x-16">
           <InvestorLogo
-            src="/public/investor-logos/hack-vc.svg"
+            src="/investor-logos/hack-vc.svg"
             alt="Hack VC"
             href="https://www.hack.vc/"
           />
           <InvestorLogo
-            src="/public/investor-logos/standard-crypto.png"
+            src="/investor-logos/standard-crypto.png"
             alt="Standard Crypto"
             href="https://www.standardcrypto.vc/"
           />
           <InvestorLogo
             href="#"
-            src="/public/investor-logos/a_capital.png"
+            src="/investor-logos/a_capital.png"
             alt="a_capital"
           />
           <InvestorLogo
             href="https://a16zcrypto.com/"
-            src="/public/investor-logos/a16z.svg"
+            src="/investor-logos/a16z.svg"
             alt="a16z"
           />
           <InvestorLogo
             href="https://www.placeholder.vc/"
-            src="/public/investor-logos/placeholder.png"
+            src="/investor-logos/placeholder.png"
             alt="placeholder"
           />
           <InvestorLogo
             href="https://robvc.com/"
-            src="/public/investor-logos/robot-ventures.png"
+            src="/investor-logos/robot-ventures.png"
             alt="Robot Ventures"
           />
           <InvestorLogo
             href="https://svangel.com/"
-            src="/public/investor-logos/sva.svg"
+            src="/investor-logos/sva.svg"
             alt="SVA"
           />
           <InvestorLogo
             href="https://polychain.capital/"
-            src="/public/investor-logos/polychain-capital.png"
+            src="/investor-logos/polychain-capital.png"
             alt="Polychain Capital"
           />
           <InvestorLogo
             href="https://www.etherealventures.com/"
-            src="/public/investor-logos/ethereal-ventures.svg"
+            src="/investor-logos/ethereal-ventures.svg"
             alt="Ethereal Ventures"
           />
         </div>
