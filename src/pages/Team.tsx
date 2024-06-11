@@ -32,7 +32,7 @@ export function Team() {
       </div>
 
       {/* Team grid */}
-      <div className="relative z-10 mx-auto flex justify-center gap-5 px-[5vw] pt-10">
+      <div className="relative mx-auto flex justify-center gap-5 px-[5vw] pt-10">
         <div className="inline-grid grid-cols-4 gap-5 max-lg:grid-cols-3 max-sm:grid-cols-2">
           <PersonCard
             name="Charles St. Louis"
@@ -164,7 +164,7 @@ export function Team() {
       </div>
 
       {/* glow */}
-      <div className="relative -mt-24 mb-14 h-96 overflow-hidden max-md:-mb-10 max-md:-mt-32">
+      <div className="relative z-[-1] -mt-24 mb-14 h-96 overflow-hidden max-md:-mb-10 max-md:-mt-32">
         <div className="absolute left-1/2 top-[224px] h-[933px] w-[1700px] origin-top -translate-x-1/2 rounded-[100%] bg-[#10F9B1] blur-[100px] max-md:scale-50"></div>
         <div className="absolute left-1/2 top-[255px] h-[879px] w-[1310px] origin-top -translate-x-1/2 rounded-[100%] bg-[#9F79FF] blur-[100px] max-md:scale-50"></div>
         <div className="absolute left-1/2 top-[222px] h-[980px] w-[1440px] origin-top -translate-x-1/2 rounded-[100%] bg-white blur-xl max-md:scale-50"></div>
