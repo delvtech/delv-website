@@ -100,7 +100,7 @@ export function Team() {
           />
           <PersonCard
             name="Gregory Lisa"
-            title="CLO"
+            title="Legal"
             portraitSrc="/portraits/greg.png"
             href="https://www.linkedin.com/in/gregory-lisa-9391785a"
             xUrl="https://x.com/gregoryclisa"
