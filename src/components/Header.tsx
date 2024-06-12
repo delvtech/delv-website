@@ -108,22 +108,14 @@ export function Header() {
           className="absolute top-8 left-[5vw] h-8 mt-3 md:hidden"
         />
         <CloseButton onClick={closeMenu} />
-        <div className="mb-20">
-          <MenuLink to="/about" onClick={closeMenu}>
-            About
-          </MenuLink>
-          <MenuLink href="https://www.github.com/delvtech" onClick={closeMenu}>
-            Build
-          </MenuLink>
-          <MenuLink
-            href="https://wellfound.com/company/delv-tech/jobs"
-            onClick={closeMenu}
-          >
+        <div className="mb-20" onClick={closeMenu}>
+          <MenuLink to="/about">About</MenuLink>
+          <MenuLink to="/team">Our Team</MenuLink>
+          <MenuLink href="https://www.github.com/delvtech">Build</MenuLink>
+          <MenuLink href="https://wellfound.com/company/delv-tech/jobs">
             Careers
           </MenuLink>
-          <MenuLink href="https://blog.delv.tech" onClick={closeMenu}>
-            Blog
-          </MenuLink>
+          <MenuLink href="https://blog.delv.tech">Blog</MenuLink>
         </div>
 
         {/* menu footer */}

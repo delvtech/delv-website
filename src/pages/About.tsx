@@ -2,24 +2,24 @@ export function About() {
   return (
     <>
       {/* hero */}
-      <div className="flex justify-center mx-auto flex gap-5 px-[5vw] pb-16 overflow-hidden relative w-full">
+      <div className="relative mx-auto flex w-full justify-center gap-5 overflow-hidden px-[5vw] pb-16">
         {/* glows */}
-        <div className="absolute w-[1002px] h-[1240px] rounded-[100%] bg-[#9F79FF] blur-[80px] max-md:blur-2xl left-1/2 -translate-x-1/2 top-[-40px] max-md:scale-75"></div>
-        <div className="absolute w-[1002px] h-[1100px] rounded-[100%] bg-[#10F9B1] blur-[80px] max-md:blur-2xl left-1/2 -translate-x-1/2 top-2 max-md:scale-75"></div>
-        <div className="absolute w-[1190px] h-[1010px] rounded-[100%] bg-white/60 blur-xl max-md:blur left-1/2 -translate-x-1/2 top-[90px] max-md:scale-75"></div>
+        <div className="absolute left-1/2 top-[-40px] h-[1240px] w-[1002px] -translate-x-1/2 rounded-[100%] bg-[#9F79FF] blur-[80px] max-md:scale-75 max-md:blur-2xl"></div>
+        <div className="absolute left-1/2 top-2 h-[1100px] w-[1002px] -translate-x-1/2 rounded-[100%] bg-[#10F9B1] blur-[80px] max-md:scale-75 max-md:blur-2xl"></div>
+        <div className="absolute left-1/2 top-[90px] h-[1010px] w-[1190px] -translate-x-1/2 rounded-[100%] bg-white/60 blur-xl max-md:scale-75 max-md:blur"></div>
 
         {/* black circle */}
-        <div className="absolute w-[1104px] h-[1104px] rounded-full bg-black left-1/2 -translate-x-1/2 top-10 max-md:scale-75"></div>
-        <div className="absolute bg-grid w-full h-full [clip-path:circle(552px_at_50%_592px)]"></div>
+        <div className="absolute left-1/2 top-10 h-[1104px] w-[1104px] -translate-x-1/2 rounded-full bg-black max-md:scale-75"></div>
+        <div className="absolute h-full w-full bg-grid [clip-path:circle(552px_at_50%_592px)]"></div>
 
         {/* bottom shadow */}
-        <div className="absolute w-full h-[440px] bg-gradient-to-b from-transparent to-black bottom-0"></div>
+        <div className="absolute bottom-0 h-[440px] w-full bg-gradient-to-b from-transparent to-black"></div>
 
-        <div className="w-[630px] text-center mt-72 max-md:mt-64 relative">
-          <h1 className="font-incise text-[82px] tracking-tight leading-none mb-9">
+        <div className="relative mt-72 w-[630px] text-center max-md:mt-64">
+          <h1 className="mb-9 font-incise text-[82px] leading-none tracking-tight">
             About
           </h1>
-          <p className="font-blanka text-2xl leading-8">
+          <p className="text-2xl leading-8">
             We believe in a world where global economic systems will operate on
             highly accessible decentralized infrastructure.
           </p>
@@ -27,22 +27,20 @@ export function About() {
       </div>
 
       {/* mission */}
-      <div className="py-56 max-md:pt-32 max-md:pb-40 overflow-hidden relative">
+      <div className="relative overflow-hidden py-56 max-md:pb-40 max-md:pt-32">
         {/* glows */}
-        <div className="absolute w-[1240px] h-[414px] rounded-[100%] bg-[#9F79FF] blur-[100px] left-1/2 -translate-x-1/2 top-full -translate-y-6 opacity-55"></div>
-        <div className="absolute w-[1240px] h-[482px] rounded-[100%] bg-[#10F9B1] blur-[100px] left-1/2 -translate-x-1/2 top-full translate-y-.5 opacity-55"></div>
-        <div className="absolute w-[1240px] h-[524px] rounded-[100%] bg-white/60 blur-xl left-1/2 -translate-x-1/2 top-full translate-y-6 opacity-55"></div>
+        <div className="absolute left-1/2 top-full h-[414px] w-[1240px] -translate-x-1/2 -translate-y-6 rounded-[100%] bg-[#9F79FF] opacity-55 blur-[100px]"></div>
+        <div className="translate-y-.5 absolute left-1/2 top-full h-[482px] w-[1240px] -translate-x-1/2 rounded-[100%] bg-[#10F9B1] opacity-55 blur-[100px]"></div>
+        <div className="absolute left-1/2 top-full h-[524px] w-[1240px] -translate-x-1/2 translate-y-6 rounded-[100%] bg-white/60 opacity-55 blur-xl"></div>
 
-        <div className="max-w-5xl px-[5vw] box-content flex max-md:flex-col items-end max-md:items-start justify-between mx-auto">
-          <div className="flex flex-col gap-4 justify-between max-w-72">
-            <p className="text-3xl leading-none bg-gradient-to-br from-[#71F8F8] to-[#c5edff] bg-clip-text text-transparent">
-              01
-            </p>
-            <h2 className="text-[82px] font-incise tracking-tight leading-none">
+        <div className="mx-auto box-content flex max-w-5xl items-end justify-between px-[5vw] max-md:flex-col max-md:items-start">
+          <div className="flex max-w-72 flex-col justify-between gap-4">
+            <p className="gradient-text text-3xl leading-none">01</p>
+            <h2 className="font-incise text-[82px] leading-none tracking-tight">
               Mission
             </h2>
           </div>
-          <p className="max-w-[440px] max-md:max-w-full max-md:mt-10 max-md:text-lg font-blanka">
+          <p className="max-w-[440px] max-md:mt-10 max-md:max-w-full max-md:text-lg">
             Our Mission is to advance the safe adoption of decentralized
             financial systems by building novel, research-backed, and open
             source infrastructure.
@@ -51,19 +49,19 @@ export function About() {
       </div>
 
       {/* values */}
-      <div className="pt-36 max-md:pt-28 overflow-y-hidden relative max-md:text-lg">
-        <div className="max-w-5xl px-[5vw] box-content flex items-start justify-between mx-auto">
-          <div className="flex flex-wrap mx-lg:flex-col items justify-between gap-16 max-xl:gap-12 font-blanka [&_p]:opacity-75">
-            <div className="flex flex-col gap-4 justify-between max-w-72">
-              <p className="text-3xl leading-none bg-gradient-to-br from-[#71F8F8] to-[#c5edff] bg-clip-text text-transparent !opacity-100">
+      <div className="relative overflow-y-hidden pt-36 max-md:pt-28 max-md:text-lg">
+        <div className="mx-auto box-content flex max-w-5xl items-start justify-between px-[5vw]">
+          <div className="mx-lg:flex-col items flex flex-wrap justify-between gap-16 max-xl:gap-12 [&_p]:opacity-75">
+            <div className="flex max-w-72 flex-col justify-between gap-4">
+              <p className="gradient-text text-3xl leading-none !opacity-100">
                 02
               </p>
-              <h2 className="text-[82px] font-incise tracking-tight leading-none">
+              <h2 className="font-incise text-[82px] leading-none tracking-tight">
                 Values
               </h2>
             </div>
 
-            <p className="basis-[440px] max-lg:basis-auto mt-6 max-lg:mt-0">
+            <p className="mt-6 basis-[440px] max-lg:mt-0 max-lg:basis-auto">
               Core values guide our interactions with one another and the
               community at large. They are deeply ingrained beliefs about who we
               are as a collective and anchor our company culture. Values are the
@@ -111,27 +109,27 @@ export function About() {
       </div>
 
       {/* glow */}
-      <div className="relative h-96 overflow-hidden max-md:-mt-10 mb-14 max-md:-mb-10">
-        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-[#10F9B1] w-[1700px] h-[933px] top-[224px] blur-[100px] max-md:scale-50 origin-top"></div>
-        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-[#9F79FF] w-[1310px] h-[879px] top-[255px] blur-[100px] max-md:scale-50 origin-top"></div>
-        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-white w-[1440px] h-[980px] top-[222px] blur-xl max-md:scale-50 origin-top"></div>
-        <div className="absolute rounded-[100%] left-1/2 -translate-x-1/2 bg-black w-[2022px] h-[980px] top-[237px] max-md:scale-50 origin-top"></div>
-        <div className="absolute bg-grid w-full h-full [clip-path:ellipse(1011px_490px_at_50%_727px)] bg-[0_86px]"></div>
+      <div className="relative mb-14 h-96 overflow-hidden max-md:-mb-10 max-md:-mt-10">
+        <div className="absolute left-1/2 top-[224px] h-[933px] w-[1700px] origin-top -translate-x-1/2 rounded-[100%] bg-[#10F9B1] blur-[100px] max-md:scale-50"></div>
+        <div className="absolute left-1/2 top-[255px] h-[879px] w-[1310px] origin-top -translate-x-1/2 rounded-[100%] bg-[#9F79FF] blur-[100px] max-md:scale-50"></div>
+        <div className="absolute left-1/2 top-[222px] h-[980px] w-[1440px] origin-top -translate-x-1/2 rounded-[100%] bg-white blur-xl max-md:scale-50"></div>
+        <div className="absolute left-1/2 top-[237px] h-[980px] w-[2022px] origin-top -translate-x-1/2 rounded-[100%] bg-black max-md:scale-50"></div>
+        <div className="absolute h-full w-full bg-grid bg-[0_86px] [clip-path:ellipse(1011px_490px_at_50%_727px)]"></div>
       </div>
 
       {/* guiding principles */}
-      <div className="pb-32 overflow-y-hidden relative max-md:text-lg">
-        <div className="max-w-5xl px-[5vw] box-content flex items-start justify-between mx-auto">
-          <div className="flex flex-wrap mx-lg:flex-col items justify-between gap-16 max-xl:gap-12 font-blanka [&_p]:opacity-75">
-            <div className="flex flex-col gap-4 justify-between max-w-72">
-              <p className="text-3xl leading-none bg-gradient-to-br from-[#71F8F8] to-[#c5edff] bg-clip-text text-transparent !opacity-100">
+      <div className="relative overflow-y-hidden pb-32 max-md:text-lg">
+        <div className="mx-auto box-content flex max-w-5xl items-start justify-between px-[5vw]">
+          <div className="mx-lg:flex-col items flex flex-wrap justify-between gap-16 max-xl:gap-12 [&_p]:opacity-75">
+            <div className="flex max-w-72 flex-col justify-between gap-4">
+              <p className="gradient-text text-3xl leading-none !opacity-100">
                 03
               </p>
-              <h2 className="text-[82px] font-incise tracking-tight leading-none">
+              <h2 className="font-incise text-[82px] leading-none tracking-tight">
                 Guiding Principles
               </h2>
             </div>
-            <p className="basis-[440px] max-lg:basis-auto mt-24 max-lg:mt-0">
+            <p className="mt-24 basis-[440px] max-lg:mt-0 max-lg:basis-auto">
               Guiding Principles are mission focused and help to steer our
               priorities. They are the guideposts that ensure we stay true to
               the ideals we have set out for ourselves. They underpin every
@@ -143,9 +141,9 @@ export function About() {
               </h3>
               <p>
                 Extraordinary claims require extraordinary proof. We are
-                committed to research, develop, and ship our work with
-                clear and convincing results. We ruthlessly prioritize towards
-                producing these results.
+                committed to research, develop, and ship our work with clear and
+                convincing results. We ruthlessly prioritize towards producing
+                these results.
               </p>
             </div>
             <div className="basis-[440px] max-lg:basis-auto">

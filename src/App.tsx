@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { Header } from "src/components/Header";
 import { About } from "src/pages/About";
 import { Home } from "src/pages/Home";
+import { Team } from "src/pages/Team";
 import { region } from "src/region";
 
 function App() {
@@ -15,10 +16,16 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/team" element={<Team />} />
+
           {/* TODO: Remove hardcoded URL */}
           <Route path="/uk" element={<Redirect to="https://uk.delv.tech" />} />
+
           {/* Discord redirect */}
-          <Route path="/discord" element={<Redirect to="https://discord.gg/EEfKmfQdtx" />} />
+          <Route
+            path="/discord"
+            element={<Redirect to="https://discord.gg/EEfKmfQdtx" />}
+          />
         </Routes>
       </div>
     </>

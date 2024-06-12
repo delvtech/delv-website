@@ -12,8 +12,8 @@ import hyperdriveCornerArc from "src/assets/hyperdrive-corner-arc.svg";
 import hyperdriveLogo from "src/assets/hyperdrive-logo.svg";
 import { FlairDown } from "src/components/FlairDown";
 import { FlairUp } from "src/components/FlairUp";
-import { ProjectCard } from "src/components/ProjectCard";
-import { ProjectDrawer } from "src/components/ProjectDrawer";
+import { ProjectCard } from "src/components/home/ProjectCard";
+import { ProjectDrawer } from "src/components/home/ProjectDrawer";
 import { region } from "src/region";
 import councilGraphic from "/council-graphic.png";
 import elfiverseGraphicBottomLeft from "/elfiverse-graphic-bottom-left.png";
@@ -22,32 +22,32 @@ import elfiverseGraphicTopRight from "/elfiverse-graphic-top-right.png";
 export function Home() {
   const [openedDrawer, setOpenedDrawer] = useState<DrawerName | null>(null);
 
-  const onKeyDown = useRef((e: KeyboardEvent) => {
+  const { current: closeDrawer } = useRef(() => {
+    setOpenedDrawer(null);
+    window.removeEventListener("keydown", onKeyDown);
+  });
+
+  const { current: onKeyDown } = useRef((e: KeyboardEvent) => {
     if (e.key === "Escape") {
-      setOpenedDrawer(null);
+      closeDrawer();
     }
   });
 
   function openDrawer(name: DrawerName) {
     setOpenedDrawer(name);
-    window.addEventListener("keydown", onKeyDown.current);
-  }
-
-  function closeDrawer() {
-    setOpenedDrawer(null);
-    window.removeEventListener("keydown", onKeyDown.current);
+    window.addEventListener("keydown", onKeyDown);
   }
 
   return (
-    <div className="overflow-hidden relative">
+    <div className="relative overflow-hidden">
       {/* flair glows */}
-      <FlairUp className="fixed top-0 left-1/2 -translate-x-1/2 z-[-1]" />
-      <FlairDown className="fixed bottom-0 left-1/2 -translate-x-1/2 z-[-1]" />
+      <FlairUp className="fixed left-1/2 top-0 z-[-1] -translate-x-1/2" />
+      <FlairDown className="fixed bottom-0 left-1/2 z-[-1] -translate-x-1/2" />
 
-      <main className="max-w-[1440px] px-20 max-xl:px-[5vw] mt-32 flex justify-center mx-auto gap-5 max-xl:flex-col max-xl:max-w-[850px] box-content">
+      <main className="mx-auto mt-32 box-content flex max-w-[1440px] justify-center gap-5 px-20 max-xl:max-w-[850px] max-xl:flex-col max-xl:px-[5vw]">
         {/* Left (title + first 2 titles) */}
         <div className="flex flex-col justify-between max-xl:items-center">
-          <h1 className="font-incise text-[82px] max-xl:text-[60px] max-xs:text-5xl max-xs:text-center w-[600px] max-xl:w-full tracking-tight leading-none -mt-2 max-xl:mt-5 mb-10 max-xl:mb-16">
+          <h1 className="-mt-2 mb-10 w-[600px] font-incise text-[82px] leading-none tracking-tight max-xl:mb-16 max-xl:mt-5 max-xl:w-full max-xl:text-[60px] max-xs:text-center max-xs:text-5xl">
             New Protocols for{" "}
             <span className="whitespace-nowrap">New Markets</span>
           </h1>
@@ -79,9 +79,9 @@ export function Home() {
         </div>
 
         {/* Right */}
-        <div className="flex flex-col sm:max-xl:flex-row max-xl:justify-center gap-5">
+        <div className="flex flex-col gap-5 max-xl:justify-center sm:max-xl:flex-row">
           <ProjectCard
-            className="h-64 flex-1 max-sm:h-auto max-sm:min-h-[280px] max-md:max-w-full"
+            className="h-64 flex-1 max-md:max-w-full max-sm:h-auto max-sm:min-h-[280px]"
             logoSrc={elementLogo}
             logoAltText="Element"
             description="Element is an open-source protocol for fixed and variable yield markets."
@@ -89,7 +89,7 @@ export function Home() {
             onClick={() => openDrawer("element")}
           />
           <ProjectCard
-            className="h-[348px] flex-1 max-sm:h-auto max-sm:min-h-[280px] max-md:max-w-full"
+            className="h-[348px] flex-1 max-md:max-w-full max-sm:h-auto max-sm:min-h-[280px]"
             logoSrc={elfiverseLogo}
             logoAltText="Elfiverse"
             description="Elfiverse is an endeavor to intersect the DeFi and NFT worlds for community building, introducing new possibilities for governance."
@@ -102,9 +102,9 @@ export function Home() {
       {/* drawer overlay */}
       <div
         className={classNames(
-          "fixed inset-0 bg-black bg-opacity-50 backdrop-blur-[3px] opacity-0 pointer-events-none transition-all duration-300 z-50",
+          "pointer-events-none fixed inset-0 z-50 bg-black bg-opacity-50 opacity-0 backdrop-blur-[3px] transition-all duration-300",
           {
-            "opacity-100 pointer-events-auto": openedDrawer,
+            "pointer-events-auto opacity-100": openedDrawer,
           },
         )}
         onClick={closeDrawer}
@@ -118,20 +118,20 @@ export function Home() {
         onClose={closeDrawer}
       >
         {/* glow */}
-        <div className="absolute w-[757.166px] h-[758.23px] left-[-251.67px] bottom-[-313.08px] bg-[#46516F] opacity-80 blur-[70px] rounded-full"></div>
+        <div className="absolute bottom-[-313.08px] left-[-251.67px] h-[758.23px] w-[757.166px] rounded-full bg-[#46516F] opacity-80 blur-[70px]"></div>
         <img
           src={councilGraphic}
-          className="absolute block left-[-192px] bottom-[-240px] max-xl:opacity-50 transition-all"
+          className="absolute bottom-[-240px] left-[-192px] block transition-all max-xl:opacity-50"
         />
 
         <img
           src={councilLogo}
           alt="Council"
-          className="mt-20 max-md:mt-14 ml-[2vw] max-lg:ml-0 h-[60px] relative"
+          className="relative ml-[2vw] mt-20 h-[60px] max-lg:ml-0 max-md:mt-14"
         />
 
-        <div className="w-96 max-lg:w-full absolute right-[7vw] bottom-[10vh] max-lg:static mt-10">
-          <div className="flex flex-col gap-[1em] opacity-80 text-lg font-blanka leading-snug mb-8 [text-shadow:0_0_5px_#191E31,1px_1px_#191E31]">
+        <div className="absolute bottom-[10vh] right-[7vw] mt-10 w-96 max-lg:static max-lg:w-full">
+          <div className="mb-8 flex flex-col gap-[1em] text-lg leading-snug opacity-80 [text-shadow:0_0_5px_#191E31,1px_1px_#191E31]">
             <p>
               Council represents the next evolution of on-chain governance,
               allowing anyone to build adaptable governance systems that meet
@@ -156,7 +156,7 @@ export function Home() {
 
       {/* hyperdrive drawer */}
       <ProjectDrawer
-        className="bg-[url(/public/hyperdrive-graphic.png)] bg-no-repeat bg-right-bottom bg-cover bg-[#191E31] shadow-[inset_-100px_5vh_9999px_100px_rgba(0,0,0,.75),inset_-400px_-200px_9999px_100px_rgba(0,0,0,.8)] max-md:!bg-center max-md:shadow-[inset_-100px_5vh_9999px_100px_rgba(0,0,0,.5),inset_-400px_-200px_9999px_100px_rgba(0,0,0,.6)]"
+        className="bg-[#191E31] bg-[url(/public/hyperdrive-graphic.png)] bg-cover bg-right-bottom bg-no-repeat shadow-[inset_-100px_5vh_9999px_100px_rgba(0,0,0,.75),inset_-400px_-200px_9999px_100px_rgba(0,0,0,.8)] max-md:!bg-center max-md:shadow-[inset_-100px_5vh_9999px_100px_rgba(0,0,0,.5),inset_-400px_-200px_9999px_100px_rgba(0,0,0,.6)]"
         insideClassName="!min-h-[620px] max-md:!min-h-full h-screen max-md:h-auto"
         isOpen={openedDrawer === "hyperdrive"}
         onClose={closeDrawer}
@@ -164,13 +164,13 @@ export function Home() {
         <img
           src={hyperdriveLogo}
           alt="Hyperdrive"
-          className="mt-24 ml-[3vw] max-xl:ml-0 h-[90px] relative"
+          className="relative ml-[3vw] mt-24 h-[90px] max-xl:ml-0"
         />
 
         <div
           className={classNames(
-            " max-lg:w-full absolute right-[10vw] max-lg:static mt-6 opacity-80 text-lg font-blanka leading-snug mb-8 [text-shadow:0_0_5px_black,1px_1px_black]",
-            region === "uk" ? "w-96 top-1/2" : "w-[440px] bottom-[10vw]",
+            "absolute right-[10vw] mb-8 mt-6 text-lg leading-snug opacity-80 [text-shadow:0_0_5px_black,1px_1px_black] max-lg:static max-lg:w-full",
+            region === "uk" ? "top-1/2 w-96" : "bottom-[10vw] w-[440px]",
           )}
         >
           {region === "uk" ? (
@@ -201,20 +201,20 @@ export function Home() {
         onClose={closeDrawer}
       >
         {/* blur */}
-        <div className="absolute w-[942px] h-[943px] top-[-245px] left-[-321px] bg-[#224BAD] blur-[100px] rounded-full"></div>
+        <div className="absolute left-[-321px] top-[-245px] h-[943px] w-[942px] rounded-full bg-[#224BAD] blur-[100px]"></div>
         <img
           src={elementBalls}
-          className="absolute block w-[853px] h-[715px] top-[-193.18px] left-[-296.33px] max-2xl:opacity-50 transition-all"
+          className="absolute left-[-296.33px] top-[-193.18px] block h-[715px] w-[853px] transition-all max-2xl:opacity-50"
         />
 
         <img
           src={elementLogo}
           alt="Element"
-          className="mt-16 max-md:mt-14 h-[92px] relative"
+          className="relative mt-16 h-[92px] max-md:mt-14"
         />
 
-        <div className="w-96 max-lg:w-full absolute right-[10vw] bottom-[15vh] max-lg:static mt-10">
-          <div className="flex flex-col gap-[1em] opacity-80 text-lg font-blanka leading-snug mb-8 [text-shadow:0_0_5px_#2D59AF,1px_1px_#2D59AF]">
+        <div className="absolute bottom-[15vh] right-[10vw] mt-10 w-96 max-lg:static max-lg:w-full">
+          <div className="mb-8 flex flex-col gap-[1em] text-lg leading-snug opacity-80 [text-shadow:0_0_5px_#2D59AF,1px_1px_#2D59AF]">
             <p>
               Our journey into DeFi started with the Element Protocol back in
               2020. Element enables users to access fixed income in the DeFi
@@ -245,21 +245,21 @@ export function Home() {
       >
         <img
           src={elfiverseGraphicTopRight}
-          className="absolute block top-[-115px] right-[-12px] md:max-lg:opacity-50 transition-all max-md:scale-75 origin-top-right"
+          className="absolute right-[-12px] top-[-115px] block origin-top-right transition-all max-md:scale-75 md:max-lg:opacity-50"
         />
         <img
           src={elfiverseGraphicBottomLeft}
-          className="absolute block left-[-15px] bottom-[-44px] md:max-lg:opacity-50 transition-all max-md:scale-75 origin-bottom-left"
+          className="absolute bottom-[-44px] left-[-15px] block origin-bottom-left transition-all max-md:scale-75 md:max-lg:opacity-50"
         />
 
         <img
           src={elfiverseLogo}
           alt="Elfiverse"
-          className="mt-12 h-[72px] relative max-lg:mt-20"
+          className="relative mt-12 h-[72px] max-lg:mt-20"
         />
 
-        <div className="w-96 max-lg:w-full absolute right-[10vw] bottom-[16vh] max-lg:static mt-10">
-          <p className="opacity-80 text-lg font-blanka leading-snug mb-8 [text-shadow:0_0_5px_#191E31,1px_1px_#191E31]">
+        <div className="absolute bottom-[16vh] right-[10vw] mt-10 w-96 max-lg:static max-lg:w-full">
+          <p className="mb-8 text-lg leading-snug opacity-80 [text-shadow:0_0_5px_#191E31,1px_1px_#191E31]">
             The launch of the Elfiverse signifies our first series of generative
             portraits of Element elves gifted to the community to commemorate
             the launch of the Element DAO. Each ELF manifests as an array of
@@ -288,14 +288,14 @@ function VisitWebsiteButton({
 }) {
   return href ? (
     <a
-      className="backdrop-blur-lg bg-gradient-to-b from-white/30 to-white/15 hover:from-white/20 hover:to-white/10 rounded-full h-12 pl-6 pr-4 gap-2 inline-flex items-center transition-all max-md:w-full justify-center max-md:h-[60px] max-md:text-xl [text-shadow:0_0_5px_rgba(0,0,0,.5)]"
+      className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-b from-white/30 to-white/15 pl-6 pr-4 backdrop-blur-lg transition-all [text-shadow:0_0_5px_rgba(0,0,0,.5)] hover:from-white/20 hover:to-white/10 max-md:h-[60px] max-md:w-full max-md:text-xl"
       href={href}
     >
       {children}
       <img src={arrowRight} />
     </a>
   ) : (
-    <div className="backdrop-blur-lg bg-gradient-to-b from-white/30 to-white/15 rounded-full h-12 px-6 inline-flex items-center max-md:w-full justify-center max-md:h-[60px] max-md:text-xl [text-shadow:0_0_5px_rgba(0,0,0,.5)] opacity-80">
+    <div className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-b from-white/30 to-white/15 px-6 opacity-80 backdrop-blur-lg [text-shadow:0_0_5px_rgba(0,0,0,.5)] max-md:h-[60px] max-md:w-full max-md:text-xl">
       {children}
     </div>
   );
