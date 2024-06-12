@@ -22,13 +22,12 @@ export function Team() {
             Our Team
           </h1>
           <p className="font-blanka text-2xl leading-8">
-            We are a diverse group of experts from various backgrounds united by
-            a shared passion for decentralized finance (DeFi). Our collective
-            expertise and dedication drive us to innovate and create solutions
-            that empower individuals and transform the financial landscape.
-            Together, we are committed to making DeFi accessible, secure, and
-            impactful for everyone. Meet the minds behind our mission and join
-            us in shaping the future of finance.
+            We are a group united by a shared passion for decentralized finance
+            (DeFi) with respective expertise across a variety of domains.
+            Together, we are committed to transforming the financial landscape
+            to empower individuals with secure, accessible, and impactful DeFi
+            solutions. Meet the minds behind our mission and join us in shaping
+            the future of finance.
           </p>
         </div>
       </div>
@@ -68,7 +67,7 @@ export function Team() {
             name="Shant Marootian"
             title="Operations"
             portraitSrc="/portraits/shant.png"
-            href="https://warpcast.com/shant"
+            href="https://www.linkedin.com/in/smaroo"
             xUrl="https://x.com/smaroo"
           />
           <PersonCard
