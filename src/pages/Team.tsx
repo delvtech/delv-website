@@ -225,6 +225,9 @@ export function Team() {
             alt="Robot Ventures"
           />
         </div>
+        <p className="gradient-text mt-20 text-center font-incise text-2xl">
+          And more...
+        </p>
       </div>
     </>
   );
