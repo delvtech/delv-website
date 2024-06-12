@@ -38,6 +38,11 @@ export default {
             borderColor: "rgba(255, 255, 255, 0.6)",
           },
         },
+        ".gradient-text": {
+          background: "linear-gradient(to bottom right, #71F8F8, #c5edff)",
+          backgroundClip: "text",
+          color: "transparent",
+        },
       });
 
       addUtilities({
