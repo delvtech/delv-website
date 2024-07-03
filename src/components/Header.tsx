@@ -35,7 +35,7 @@ export function Header() {
     <>
       {/* Announcement banner */}
       {SHOW_ANNOUNCEMENT_BANNER && (
-        <div className="h-10 bg-black border-b border-white/10 flex items-center justify-center text-sm">
+        <div className="h-10 bg-black border-b border-white/10 flex items-center justify-center">
           <p>
             We've updated our{" "}
             <a
