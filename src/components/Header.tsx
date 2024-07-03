@@ -9,7 +9,7 @@ import xLogo from "src/assets/x-logo.svg";
 import { CloseButton } from "src/components/CloseButton";
 import { useIsScrolled } from "src/hooks/useIsScrolled";
 
-const SHOW_ANNOUNCEMENT_BANNER = false;
+const SHOW_ANNOUNCEMENT_BANNER = true;
 
 export function Header() {
   const isScrolled = useIsScrolled();
@@ -37,14 +37,23 @@ export function Header() {
       {SHOW_ANNOUNCEMENT_BANNER && (
         <div className="h-10 bg-black border-b border-white/10 flex items-center justify-center text-sm">
           <p>
-            We've updated our Privacy Policy. See the latest version{" "}
+            We've updated our{" "}
             <a
               href="https://delv-public.s3.us-east-2.amazonaws.com/delv-privacy-policy.pdf"
               className="text-[#71F8F8]"
               target="_blank"
               rel="noreferrer"
             >
-              here
+              Privacy Policy
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://delv-public.s3.us-east-2.amazonaws.com/delv-terms-of-service.pdf"
+              className="text-[#71F8F8]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Terms of Service
             </a>
             .
           </p>
