@@ -10,6 +10,7 @@ import { CloseButton } from "src/components/CloseButton";
 import { useIsScrolled } from "src/hooks/useIsScrolled";
 
 const SHOW_ANNOUNCEMENT_BANNER = true;
+const ANNOUNCEMENT_BANNER_EXPIRY = new Date("07/18/2024");
 
 export function Header() {
   const isScrolled = useIsScrolled();
@@ -30,12 +31,14 @@ export function Header() {
     setMenuOpen(false);
     window.removeEventListener("keydown", onKeyDown.current);
   }
+  const showBanner =
+    SHOW_ANNOUNCEMENT_BANNER && new Date() < ANNOUNCEMENT_BANNER_EXPIRY;
 
   return (
     <>
       {/* Announcement banner */}
-      {SHOW_ANNOUNCEMENT_BANNER && (
-        <div className="h-10 bg-black border-b border-white/10 flex items-center justify-center">
+      {showBanner && (
+        <div className="flex h-10 items-center justify-center border-b border-white/10 bg-black">
           <p>
             We've updated our{" "}
             <a
@@ -64,7 +67,7 @@ export function Header() {
       <Link
         to="/"
         className={classNames(
-          "fixed top-7 left-16 max-lg:left-[5vw] z-10 h-[60px] px-6 -ml-3 bg-black/40 backdrop-blur flex items-center rounded-full overflow-hidden transition-all duration-300",
+          "fixed left-16 top-7 z-10 -ml-3 flex h-[60px] items-center overflow-hidden rounded-full bg-black/40 px-6 backdrop-blur transition-all duration-300 max-lg:left-[5vw]",
           {
             "!top-2": isScrolled,
             "mt-8": SHOW_ANNOUNCEMENT_BANNER && !isScrolled,
@@ -78,7 +81,7 @@ export function Header() {
       <button
         title="open menu"
         className={classNames(
-          "fixed top-7 right-16 max-lg:right-[5vw] w-[60px] h-[60px] rounded-full border border-white/30 p-0 box-border flex items-center justify-center hover:border-white/60 bg-black/40 backdrop-blur z-50 transition-[all,top] duration-[200ms,300ms]",
+          "fixed right-16 top-7 z-50 box-border flex h-[60px] w-[60px] items-center justify-center rounded-full border border-white/30 bg-black/40 p-0 backdrop-blur transition-[all,top] duration-[200ms,300ms] hover:border-white/60 max-lg:right-[5vw]",
           {
             "!top-3": isScrolled,
             "mt-8": SHOW_ANNOUNCEMENT_BANNER && !isScrolled,
@@ -92,7 +95,7 @@ export function Header() {
       {/* drawer overlay */}
       <div
         className={classNames(
-          "fixed inset-0 bg-transparent pointer-events-none transition-all duration-300 z-10",
+          "pointer-events-none fixed inset-0 z-10 bg-transparent transition-all duration-300",
           {
             "pointer-events-auto": menuOpen,
             "mt-8": SHOW_ANNOUNCEMENT_BANNER && !isScrolled,
@@ -104,7 +107,7 @@ export function Header() {
       {/* menu drawer */}
       <div
         className={classNames(
-          "fixed w-[360px] max-md:w-full top-0 right-[-360px] max-md:-right-full bottom-0 bg-black flex flex-col transition-all duration-300 pt-32 z-50 overflow-auto",
+          "fixed bottom-0 right-[-360px] top-0 z-50 flex w-[360px] flex-col overflow-auto bg-black pt-32 transition-all duration-300 max-md:-right-full max-md:w-full",
           {
             "!right-0": menuOpen,
             "mt-8": SHOW_ANNOUNCEMENT_BANNER && !isScrolled,
@@ -114,7 +117,7 @@ export function Header() {
         <img
           src={delvLogo}
           alt="DELV"
-          className="absolute top-8 left-[5vw] h-8 mt-3 md:hidden"
+          className="absolute left-[5vw] top-8 mt-3 h-8 md:hidden"
         />
         <CloseButton onClick={closeMenu} />
         <div className="mb-20" onClick={closeMenu}>
@@ -128,7 +131,7 @@ export function Header() {
         </div>
 
         {/* menu footer */}
-        <div className="flex gap-2 mt-auto px-8 py-2 items-center">
+        <div className="mt-auto flex items-center gap-2 px-8 py-2">
           <div className="flex gap-2">
             <SocialLink
               href="https://discord.gg/EEfKmfQdtx"
@@ -149,7 +152,7 @@ export function Header() {
               imgClassName="w-7 h-7"
             />
           </div>
-          <div className="flex gap-4 ml-auto text-lg font-medium">
+          <div className="ml-auto flex gap-4 text-lg font-medium">
             <a
               href="https://delv-public.s3.us-east-2.amazonaws.com/delv-terms-of-service.pdf"
               className="opacity-75 hover:opacity-100"
@@ -230,11 +233,11 @@ function SocialLink({
   return (
     <a
       href={href}
-      className="h-10 w-10 flex items-center justify-center group bg-transparent hover:bg-gradient-to-r from-white/10 to-white/5 rounded-full transition-all duration-300"
+      className="group flex h-10 w-10 items-center justify-center rounded-full bg-transparent from-white/10 to-white/5 transition-all duration-300 hover:bg-gradient-to-r"
     >
       <img
         className={classNames(
-          "opacity-75 group-hover:opacity-100 transition-all",
+          "opacity-75 transition-all group-hover:opacity-100",
           imgClassName,
         )}
         src={imgSrc}
