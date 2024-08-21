@@ -78,6 +78,13 @@ export function Team() {
             xUrl="https://x.com/DannyDelott"
           />
           <PersonCard
+            name="Ilya Leybovich"
+            title="Marketing"
+            portraitSrc="/portraits/ilya.png"
+            href="https://www.linkedin.com/in/ilya-leybovich-0b585272"
+            xUrl="https://x.com/ilyaleybovich22"
+          />
+          <PersonCard
             name="Andrea DiSandro"
             title="Legal"
             portraitSrc="/portraits/andrea.png"
