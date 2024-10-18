@@ -4,13 +4,14 @@ import { Link, useLocation } from "react-router-dom";
 import delvLogo from "src/assets/delv-logo.svg";
 import discordLogo from "src/assets/discord-logo.svg";
 import githubLogo from "src/assets/github-logo.svg";
+import informationCircle from "src/assets/information-circle.svg";
 import menuIcon from "src/assets/menu-icon.svg";
 import xLogo from "src/assets/x-logo.svg";
 import { CloseButton } from "src/components/CloseButton";
 import { useIsScrolled } from "src/hooks/useIsScrolled";
 
 const SHOW_ANNOUNCEMENT_BANNER = true;
-const ANNOUNCEMENT_BANNER_EXPIRY = new Date("07/18/2024");
+const ANNOUNCEMENT_BANNER_EXPIRY = new Date("11/01/2024");
 
 export function Header() {
   const isScrolled = useIsScrolled();
@@ -38,10 +39,11 @@ export function Header() {
     <>
       {/* Announcement banner */}
       {showBanner && (
-        <div className="flex h-10 items-center justify-center border-b border-white/10 bg-black">
+        <div className="flex h-10 items-center justify-center gap-2 border-b border-white/10 bg-black">
+          <img src={informationCircle} className="size-5" />
           <p>
             We've updated our{" "}
-            <a
+            {/* <a
               href="https://delv-public.s3.us-east-2.amazonaws.com/delv-privacy-policy.pdf"
               className="text-[#71F8F8]"
               target="_blank"
@@ -49,10 +51,10 @@ export function Header() {
             >
               Privacy Policy
             </a>{" "}
-            and{" "}
+            and{" "} */}
             <a
               href="https://delv-public.s3.us-east-2.amazonaws.com/delv-terms-of-service.pdf"
-              className="text-[#71F8F8]"
+              className="text-[#71F8F8] transition-all duration-100 hover:text-[#459f9f]"
               target="_blank"
               rel="noreferrer"
             >
