@@ -12,8 +12,8 @@ import hyperdriveCornerArc from "src/assets/hyperdrive-corner-arc.svg";
 import hyperdriveLogo from "src/assets/hyperdrive-logo.svg";
 import { FlairDown } from "src/components/FlairDown";
 import { FlairUp } from "src/components/FlairUp";
-import { ProjectCard } from "src/components/home/ProjectCard";
-import { ProjectDrawer } from "src/components/home/ProjectDrawer";
+import { ProjectCard } from "src/pages/home/ProjectCard";
+import { ProjectDrawer } from "src/pages/home/ProjectDrawer";
 import { region } from "src/region";
 import councilGraphic from "/council-graphic.png";
 import elfiverseGraphicBottomLeft from "/elfiverse-graphic-bottom-left.png";
@@ -156,7 +156,7 @@ export function Home() {
 
       {/* hyperdrive drawer */}
       <ProjectDrawer
-        className="bg-[#191E31] bg-[url(/public/hyperdrive-graphic.jpg)] bg-cover bg-center bg-right-bottom bg-no-repeat shadow-[inset_-100px_5vh_9999px_100px_rgba(0,0,0,.25),inset_-400px_-200px_9999px_100px_rgba(0,0,0,.4)] max-md:!bg-center max-md:shadow-[inset_-1200px_-200px_9999px_100px_rgba(0,0,0,.6)]"
+        className="bg-[#191E31] bg-[url(/hyperdrive-graphic.jpg)] bg-cover bg-right-bottom bg-no-repeat shadow-[inset_-100px_5vh_9999px_100px_rgba(0,0,0,.25),inset_-400px_-200px_9999px_100px_rgba(0,0,0,.4)] max-md:!bg-center max-md:shadow-[inset_-1200px_-200px_9999px_100px_rgba(0,0,0,.6)]"
         insideClassName="!min-h-[620px] max-md:!min-h-full h-screen max-md:h-auto"
         isOpen={openedDrawer === "hyperdrive"}
         onClose={closeDrawer}

@@ -14,8 +14,8 @@ export default {
         incise: ["f37incise"],
       },
       backgroundImage: {
-        texture: "url('/public/texture.png')",
-        grid: "url('/public/grid.svg')",
+        texture: "url('/texture.png')",
+        grid: "url('/grid.svg')",
       },
     },
   },

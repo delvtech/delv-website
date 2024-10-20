@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import { Header } from "src/components/Header";
 import { About } from "src/pages/About";
-import { Home } from "src/pages/Home";
-import { Team } from "src/pages/Team";
+import { Home } from "src/pages/home/Home";
+import { Team } from "src/pages/team/Team";
 import { region } from "src/region";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Header />
 
       {/* Main */}
-      <div className="pb-16 relative">
+      <div className="relative pb-16">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

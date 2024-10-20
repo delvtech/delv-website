@@ -1,4 +1,4 @@
-import { PersonCard } from "src/components/team/PersonCard";
+import { PersonCard } from "src/pages/team/PersonCard";
 
 export function Team() {
   return (

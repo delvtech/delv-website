@@ -10,7 +10,7 @@
   color-scheme: light dark;
   color: #fff;
   background-color: #000;
-  background-image: url("/public/grid.svg");
+  background-image: url("/grid.svg");
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,17 +20,17 @@
 
 @font-face {
   font-family: "f37blanka";
-  src: url("/public/fonts/F37Blanka-Regular.woff2") format("woff2");
+  src: url("/fonts/F37Blanka-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "f37incise";
-  src: url("/public/fonts/F37Incise-Medium.woff2") format("woff2");
+  src: url("/fonts/F37Incise-Medium.woff2") format("woff2");
   font-weight: 500;
 }
 
 @font-face {
   font-family: "f37incise";
-  src: url("/public/fonts/F37Incise-Bold.woff2") format("woff2");
+  src: url("/fonts/F37Incise-Bold.woff2") format("woff2");
   font-weight: 700;
 }
