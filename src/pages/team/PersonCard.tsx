@@ -16,7 +16,7 @@ export function PersonCard({
   xUrl: string;
 }) {
   return (
-    <div className="max- group flex max-w-64 rounded-lg from-white/70 via-[#14D7D9]/50 via-10% to-[#1A1F31] to-50% p-px bg-gradient-[148deg] hover:via-[#13F3F3]/50 hover:via-30% hover:to-[#0D9999]/50">
+    <div className="group flex max-w-64 rounded-lg from-white/70 via-[#14D7D9]/50 via-10% to-[#1A1F31] to-50% p-px bg-gradient-[148deg] hover:via-[#13F3F3]/50 hover:via-30% hover:to-[#0D9999]/50">
       <a
         href={href}
         target="_blank"

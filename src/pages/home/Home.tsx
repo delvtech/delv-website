@@ -41,8 +41,8 @@ export function Home() {
   return (
     <div className="relative overflow-hidden">
       {/* flair glows */}
-      <FlairUp className="fixed left-1/2 top-0 z-[-1] -translate-x-1/2" />
-      <FlairDown className="fixed bottom-0 left-1/2 z-[-1] -translate-x-1/2" />
+      <FlairUp className="fixed left-1/2 top-0 z-[-1] -translate-x-1/2 pointer-events-none" />
+      <FlairDown className="fixed bottom-0 left-1/2 z-[-1] -translate-x-1/2 pointer-events-none" />
 
       <main className="mx-auto mt-32 box-content flex max-w-[1440px] justify-center gap-5 px-20 max-xl:max-w-[850px] max-xl:flex-col max-xl:px-[5vw]">
         {/* Left (title + first 2 titles) */}
