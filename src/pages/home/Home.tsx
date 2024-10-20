@@ -130,7 +130,7 @@ export function Home() {
           className="relative ml-[2vw] mt-20 h-[60px] max-lg:ml-0 max-md:mt-14"
         />
 
-        <div className="absolute bottom-[10vh] right-[7vw] mt-10 w-96 max-lg:static max-lg:w-full">
+        <div className="absolute bottom-[10vh] right-[7vw] mt-10 w-96 max-lg:static max-lg:w-full backdrop-blur-sm">
           <div className="mb-8 flex flex-col gap-[1em] text-lg leading-snug opacity-80 [text-shadow:0_0_5px_#191E31,1px_1px_#191E31]">
             <p>
               Council represents the next evolution of on-chain governance,
@@ -169,7 +169,7 @@ export function Home() {
 
         <div
           className={classNames(
-            "absolute right-[10vw] mb-8 mt-6 text-lg leading-snug opacity-80 [text-shadow:0_0_5px_black,1px_1px_black] max-lg:static max-lg:w-full",
+            "absolute right-[10vw] mb-8 mt-6 text-lg leading-snug opacity-80 [text-shadow:0_0_5px_black,1px_1px_black] max-lg:static max-lg:w-full backdrop-blur-sm",
             region === "uk" ? "top-1/2 w-96" : "bottom-[10vw] w-[440px]",
           )}
         >
@@ -213,7 +213,7 @@ export function Home() {
           className="relative mt-16 h-[92px] max-md:mt-14"
         />
 
-        <div className="absolute bottom-[15vh] right-[10vw] mt-10 w-96 max-lg:static max-lg:w-full">
+        <div className="absolute bottom-[15vh] right-[10vw] mt-10 w-96 max-lg:static max-lg:w-full backdrop-blur-sm">
           <div className="mb-8 flex flex-col gap-[1em] text-lg leading-snug opacity-80 [text-shadow:0_0_5px_#2D59AF,1px_1px_#2D59AF]">
             <p>
               Our journey into DeFi started with the Element Protocol back in
@@ -230,7 +230,9 @@ export function Home() {
           </div>
 
           {region !== "uk" && (
-            <VisitWebsiteButton href="https://docs-delv.gitbook.io/element-developer-docs/" />
+            <VisitWebsiteButton href="https://docs-delv.gitbook.io/element-developer-docs/">
+              View docs
+            </VisitWebsiteButton>
           )}
         </div>
       </ProjectDrawer>
@@ -258,7 +260,7 @@ export function Home() {
           className="relative mt-12 h-[72px] max-lg:mt-20"
         />
 
-        <div className="absolute bottom-[16vh] right-[10vw] mt-10 w-96 max-lg:static max-lg:w-full">
+        <div className="absolute bottom-[16vh] right-[10vw] mt-10 w-96 max-lg:static max-lg:w-full backdrop-blur-sm">
           <p className="mb-8 text-lg leading-snug opacity-80 [text-shadow:0_0_5px_#191E31,1px_1px_#191E31]">
             The launch of the Elfiverse signifies our first series of generative
             portraits of Element elves gifted to the community to commemorate
@@ -281,7 +283,7 @@ type DrawerName = (typeof drawerNames)[number];
 
 function VisitWebsiteButton({
   href,
-  children = href ? "Visit Website" : "Coming Soon",
+  children = href ? "Visit website" : "Coming soon",
 }: {
   href?: string;
   children?: React.ReactNode;
