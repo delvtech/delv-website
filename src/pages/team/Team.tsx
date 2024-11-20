@@ -159,7 +159,7 @@ export function Team() {
             title="Core Engineer"
             portraitSrc="/portraits/sheng.png"
             href="https://www.linkedin.com/in/shenglundquist"
-            xUrl="https://x.com/lundquistsheng"
+            xUrl="https://x.com/cbottoms_"
           />
           <PersonCard
             name="Ryan Goree"
