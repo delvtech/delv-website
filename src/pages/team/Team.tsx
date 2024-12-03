@@ -162,6 +162,13 @@ export function Team() {
             xUrl="https://x.com/cbottoms_"
           />
           <PersonCard
+            name="Sean Xu"
+            title="Core Engineer"
+            portraitSrc="/portraits/sean.png"
+            href="https://github.com/Sean329"
+            xUrl="https://x.com/Sean25225"
+          />
+          <PersonCard
             name="Ryan Goree"
             title="Product Engineer"
             portraitSrc="/portraits/ryan.png"
