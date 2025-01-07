@@ -106,13 +106,6 @@ export function Team() {
             xUrl="https://x.com/jalex_towle"
           />
           <PersonCard
-            name="Gregory Lisa"
-            title="Legal"
-            portraitSrc="/portraits/greg.png"
-            href="https://www.linkedin.com/in/gregory-lisa-9391785a"
-            xUrl="https://x.com/gregoryclisa"
-          />
-          <PersonCard
             name="Matt Brown"
             title="Integrations Engineer"
             portraitSrc="/portraits/matt.png"
