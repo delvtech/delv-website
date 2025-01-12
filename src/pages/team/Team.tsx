@@ -127,13 +127,6 @@ export function Team() {
             xUrl="https://x.com/MazyGio"
           />
           <PersonCard
-            name="Dylan Paiton"
-            title="Core Engineer"
-            portraitSrc="/portraits/dylan.png"
-            href="https://github.com/dpaiton"
-            xUrl="https://x.com/PaitonDylan"
-          />
-          <PersonCard
             name="Jonny Rhea"
             title="Co-Founder & CTO"
             portraitSrc="/portraits/jonny.png"
@@ -146,13 +139,6 @@ export function Team() {
             portraitSrc="/portraits/john.png"
             href="https://github.com/mcclurejt"
             xUrl="https://x.com/0xpickleback"
-          />
-          <PersonCard
-            name="Sheng Lundquist"
-            title="Core Engineer"
-            portraitSrc="/portraits/sheng.png"
-            href="https://www.linkedin.com/in/shenglundquist"
-            xUrl="https://x.com/cbottoms_"
           />
           <PersonCard
             name="Sean Xu"
