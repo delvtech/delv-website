@@ -34,7 +34,7 @@ export function Team() {
 
       {/* Team grid */}
       <div className="relative mx-auto flex justify-center gap-5 px-[5vw] pt-10">
-        <div className="inline-grid grid-cols-4 gap-5 max-lg:grid-cols-3 max-sm:grid-cols-2">
+        <div className="inline-grid grid-cols-5 gap-5 max-xl:grid-cols-4 max-lg:grid-cols-3 max-sm:grid-cols-2">
           <PersonCard
             name="Charles St. Louis"
             title="CEO"
