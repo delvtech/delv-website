@@ -37,7 +37,7 @@ export function ProjectCard({
           src={logoSrc}
           alt={logoAltText}
           className={classNames(
-            "origin-top-left transition-all duration-300 md:group-hover:scale-75",
+            "origin-top-left transition-all duration-300 md:group-hover:scale-75 max-w-[280px]",
             logoClassName,
           )}
         />

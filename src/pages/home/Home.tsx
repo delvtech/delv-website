@@ -5,7 +5,7 @@ import councilCornerArc from "src/assets/council-corner-arc.svg";
 import councilLogo from "src/assets/council-logo.svg";
 import elementBalls from "src/assets/element-balls.svg";
 import elementCornerArc from "src/assets/element-corner-arc.svg";
-import elementLogo from "src/assets/element-logo.svg";
+import elementProtocolLogo from "src/assets/element-protocol-logo.svg";
 import elfiverseCornerArc from "src/assets/elfiverse-corner-arc.svg";
 import elfiverseLogo from "src/assets/elfiverse-logo.svg";
 import hyperdriveCornerArc from "src/assets/hyperdrive-corner-arc.svg";
@@ -41,8 +41,8 @@ export function Home() {
   return (
     <div className="relative overflow-hidden">
       {/* flair glows */}
-      <FlairUp className="fixed left-1/2 top-0 z-[-1] -translate-x-1/2 pointer-events-none" />
-      <FlairDown className="fixed bottom-0 left-1/2 z-[-1] -translate-x-1/2 pointer-events-none" />
+      <FlairUp className="pointer-events-none fixed left-1/2 top-0 z-[-1] -translate-x-1/2" />
+      <FlairDown className="pointer-events-none fixed bottom-0 left-1/2 z-[-1] -translate-x-1/2" />
 
       <main className="mx-auto mt-32 box-content flex max-w-[1440px] justify-center gap-5 px-20 max-xl:max-w-[850px] max-xl:flex-col max-xl:px-[5vw]">
         {/* Left (title + first 2 titles) */}
@@ -65,7 +65,7 @@ export function Home() {
               className="h-[432px] flex-1 max-md:h-auto max-md:min-h-[280px] max-md:max-w-full"
               logoSrc={hyperdriveLogo}
               logoAltText="Hyperdrive"
-              logoClassName="-mb-10 max-w-[280px]"
+              logoClassName="-mb-10"
               description={
                 region === "uk"
                   ? "Hyperdrive is an automated market maker for fixed and variable yields."
@@ -82,9 +82,9 @@ export function Home() {
         <div className="flex flex-col gap-5 max-xl:justify-center sm:max-xl:flex-row">
           <ProjectCard
             className="h-64 flex-1 max-md:max-w-full max-sm:h-auto max-sm:min-h-[280px]"
-            logoSrc={elementLogo}
-            logoAltText="Element"
-            description="Element is an open-source protocol for fixed and variable yield markets."
+            logoSrc={elementProtocolLogo}
+            logoAltText="Element protocol"
+            description="The Element protocol is an open-source protocol for fixed and variable yield markets."
             arc={elementCornerArc}
             onClick={() => openDrawer("element")}
           />
@@ -130,7 +130,7 @@ export function Home() {
           className="relative ml-[2vw] mt-20 h-[60px] max-lg:ml-0 max-md:mt-14"
         />
 
-        <div className="absolute bottom-[10vh] right-[7vw] mt-10 w-96 max-lg:static max-lg:w-full backdrop-blur-sm">
+        <div className="absolute bottom-[10vh] right-[7vw] mt-10 w-96 backdrop-blur-sm max-lg:static max-lg:w-full">
           <div className="mb-8 flex flex-col gap-[1em] text-lg leading-snug opacity-80 [text-shadow:0_0_5px_#191E31,1px_1px_#191E31]">
             <p>
               Council represents the next evolution of on-chain governance,
@@ -169,7 +169,7 @@ export function Home() {
 
         <div
           className={classNames(
-            "absolute right-[10vw] mb-8 mt-6 text-lg leading-snug opacity-80 [text-shadow:0_0_5px_black,1px_1px_black] max-lg:static max-lg:w-full backdrop-blur-sm",
+            "absolute right-[10vw] mb-8 mt-6 text-lg leading-snug opacity-80 backdrop-blur-sm [text-shadow:0_0_5px_black,1px_1px_black] max-lg:static max-lg:w-full",
             region === "uk" ? "top-1/2 w-96" : "bottom-[10vw] w-[440px]",
           )}
         >
@@ -208,18 +208,18 @@ export function Home() {
         />
 
         <img
-          src={elementLogo}
-          alt="Element"
+          src={elementProtocolLogo}
+          alt="Element protocol"
           className="relative mt-16 h-[92px] max-md:mt-14"
         />
 
-        <div className="absolute bottom-[15vh] right-[10vw] mt-10 w-96 max-lg:static max-lg:w-full backdrop-blur-sm">
+        <div className="absolute bottom-[15vh] right-[10vw] mt-10 w-96 backdrop-blur-sm max-lg:static max-lg:w-full">
           <div className="mb-8 flex flex-col gap-[1em] text-lg leading-snug opacity-80 [text-shadow:0_0_5px_#2D59AF,1px_1px_#2D59AF]">
             <p>
               Our journey into DeFi started with the Element Protocol back in
-              2020. Element enables users to access fixed income in the DeFi
-              market. It does not require trusted intermediaries and allows for
-              fast and efficient trading of fixed and variable yields.
+              2020. Element protocol enables users to access fixed income in the
+              DeFi market. It does not require trusted intermediaries and allows
+              for fast and efficient trading of fixed and variable yields.
             </p>
             <p>
               On March 31, 2022, the Company released control of the Element
@@ -260,7 +260,7 @@ export function Home() {
           className="relative mt-12 h-[72px] max-lg:mt-20"
         />
 
-        <div className="absolute bottom-[16vh] right-[10vw] mt-10 w-96 max-lg:static max-lg:w-full backdrop-blur-sm">
+        <div className="absolute bottom-[16vh] right-[10vw] mt-10 w-96 backdrop-blur-sm max-lg:static max-lg:w-full">
           <p className="mb-8 text-lg leading-snug opacity-80 [text-shadow:0_0_5px_#191E31,1px_1px_#191E31]">
             The launch of the Elfiverse signifies our first series of generative
             portraits of Element elves gifted to the community to commemorate
