@@ -83,8 +83,8 @@ export function Home() {
           <ProjectCard
             className="h-64 flex-1 max-md:max-w-full max-sm:h-auto max-sm:min-h-[280px]"
             logoSrc={elementProtocolLogo}
-            logoAltText="Element protocol"
-            description="The Element protocol is an open-source protocol for fixed and variable yield markets."
+            logoAltText="Element Protocol"
+            description="The Element Protocol is an open-source protocol for fixed and variable yield markets."
             arc={elementCornerArc}
             onClick={() => openDrawer("element")}
           />
@@ -209,7 +209,7 @@ export function Home() {
 
         <img
           src={elementProtocolLogo}
-          alt="Element protocol"
+          alt="Element Protocol"
           className="relative mt-16 h-[92px] max-md:mt-14"
         />
 
@@ -217,7 +217,7 @@ export function Home() {
           <div className="mb-8 flex flex-col gap-[1em] text-lg leading-snug opacity-80 [text-shadow:0_0_5px_#2D59AF,1px_1px_#2D59AF]">
             <p>
               Our journey into DeFi started with the Element Protocol back in
-              2020. Element protocol enables users to access fixed income in the
+              2020. Element Protocol enables users to access fixed income in the
               DeFi market. It does not require trusted intermediaries and allows
               for fast and efficient trading of fixed and variable yields.
             </p>
