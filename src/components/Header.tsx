@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import delvLogo from "src/assets/delv-logo.svg";
 import discordLogo from "src/assets/discord-logo.svg";
 import githubLogo from "src/assets/github-logo.svg";
+import farcasterLogo from "src/assets/farcaster-logo.svg";
 import informationCircle from "src/assets/information-circle.svg";
 import menuIcon from "src/assets/menu-icon.svg";
 import xLogo from "src/assets/x-logo.svg";
@@ -140,6 +141,12 @@ export function Header() {
               name="Discord"
               imgSrc={discordLogo}
               imgClassName="w-7 h-7"
+            />
+            <SocialLink
+              href="https://warpcast.com/~/channel/delv "
+              name="Warpcast"
+              imgSrc={farcasterLogo}
+              imgClassName="w-6 h-6"
             />
             <SocialLink
               href="https://twitter.com/delv_tech"
